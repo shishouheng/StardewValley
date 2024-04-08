@@ -1,31 +1,405 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayMaker/Editor/Resources/EditorStartupPrefs.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/.qframework/PackageManager/PackageInfosRequestCache.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/Seed.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/Seed.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Player.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Player.aseprite.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Seed.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Seed.aseprite.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/Soil.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/Soil.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/SoilTile.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/SoilTile.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/SoilTileset.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Tilemap/SoilTileset.aseprite.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Setting.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Setting.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/QFrameworkData/LiveCodingKit.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.Designer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.Designer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SoilData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SoilData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/004.Player.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/004.Player.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/005.SoilTileset.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/005.SoilTileset.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/005.SoilTileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/005.SoilTileset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/008.Seed.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/008.Seed.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/009.TileSelect.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/009.TileSelect.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/010.Water.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/010.Water.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/011.SmallPlant.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/011.SmallPlant.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/012.Ripe.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/012.Ripe.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/014.Old.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/014.Old.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/028.ShovelDig.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/028.ShovelDig.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/028.Take.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/028.Take.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.ChallengeFinish.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.ChallengeFinish.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.Harvest.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.Harvest.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.NextDay.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.NextDay.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.PutSeed.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.PutSeed.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.Water.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/029.Water.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolHand.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolHand.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolSeed.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolSeed.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolShovel.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolShovel.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolWaterningScan.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/030.ToolWaterningScan.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/031.ToolShovel.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/031.ToolShovel.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/034.ToolSeedRadish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/034.ToolSeedRadish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/035.SeedRadish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/035.SeedRadish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/036.RipeRadish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/036.RipeRadish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/036.SmallPlantRadish.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/036.SmallPlantRadish.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/037.fusion-pixel.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/037.fusion-pixel.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/047.Home.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/047.Home.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/048.Buy.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/048.Buy.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/049.GroundTileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/049.GroundTileset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/051.GroundTileset.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/051.GroundTileset.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.RipeChineseCabbage.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.RipeChineseCabbage.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.SeedChineseCabbage.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.SeedChineseCabbage.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.SmallChineseCabbage.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.SmallChineseCabbage.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.ToolSeedChineseCabbage.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/054.ToolSeedChineseCabbage.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait female.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait female.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait male.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/portrait male.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character old/walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait female.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait female.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait male.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/portrait male.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/characters/main character/walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/farm objects free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/farm objects free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/furniture free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/furniture free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/items free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/items free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/plants free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/objects&amp;items/plants free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm bridges free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm bridges free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm inside free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/farm inside free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/spring farm tilemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/069.Tiny Wonder Farm Free/Tiny Wonder Farm Free/tilemaps/spring farm tilemap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/attack and die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/attack and die.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/cat kigurumi attack and die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/cat kigurumi attack and die.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/cat kigurumi walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/cat kigurumi walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait cat kigurumi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait cat kigurumi.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait female.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait female.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait male.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait male.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait only cat kigurumi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/portrait only cat kigurumi.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/sword.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character old/walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/attack and die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/attack and die.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi attack and die.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi attack and die.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/cat kigurumi walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait cat kigurumi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait cat kigurumi.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait female.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait female.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait male.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait male.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait only cat kigurumi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait only cat kigurumi.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/portrait.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/sword.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/sword.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/walk and idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/main character/walk and idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/mushrooms.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/mushrooms/blue mushroom sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/mushrooms/blue mushroom sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/mushrooms/brown mushroom sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/characters/mushrooms/brown mushroom sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/autumn items.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/autumn items.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/furniture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/furniture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/objects.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/objects.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/summer and spring items.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/summer and spring items.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/winter items.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/items&amp;objects/winter items.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_leaves_1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_leaves_1.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_leaves_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_leaves_2.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_lilypad_1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_lilypad_1.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_lilypad_2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_lilypad_2.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_plant.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_plant.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_stone.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/animated tiles/animated_stone.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/autumn tilemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/autumn tilemap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/bridges.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/bridges.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/inside.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/inside.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/spring tilemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/spring tilemap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/summer tilemap.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/summer tilemap.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/winter outside.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder Forest 1.0/Tiny Wonder Forest 1.0/tilemaps/winter outside.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/bars free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/bars free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/base free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/base free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/buttons free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/buttons free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/gui_free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/gui_free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/icons free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/icons free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/scrollbars free.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.Tiny Wonder UI Free/Tiny Wonder UI Free/scrollbars free.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_love.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_love.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_love_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_love_transparent.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_questioning.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_questioning.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_questioning_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_questioning_transparent.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_sheet.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_sheet.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_smile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_smile.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_smile_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_smile_transparent.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_speechless.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_speechless.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_speechless_transparent.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/091.momoka/momoka/momoka_speechless_transparent.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/096.TimeNotEnough.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/096.TimeNotEnough.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk2.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk3.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk4.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Walk4.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Water.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/126.Water.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/135.spring farm tilemap mofified.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/135.spring farm tilemap mofified.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/136.spring farm tilemap mofified.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/136.spring farm tilemap mofified.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/140.Beat Thee.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/140.Beat Thee.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.TileSelect.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.TileSelect.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolHand.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolHand.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolShovel.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolShovel.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolWateringCan.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.ToolWateringCan.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.base free modified.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/144.base free modified.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/151.Computer.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/151.Computer.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/173.Water.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/素材/173.Water.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/ProjectConfig/ProjectConfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/ProjectConfig/ProjectConfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4062115a1c5748d889ffa9b1e24a7db64000/57/13a25d34/GridLayout.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/96/a4a17425/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/f5/5886bf80/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc0ec58d048641a1990f7b5fd4d13318174200/4d/2848c15b/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2eg8J17Ht8XBTTdJjt0tlk6Uiiw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;独立播放器.Start Unity.executor&quot;: &quot;Debug&quot;,
+    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
+      &quot;/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
+      &quot;/Users/zhushouheng/.local/share/Symbols/src&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="附加到 Unity 编辑器.附加到 Unity 编辑器">
+    <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1c1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1c1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath $PROJECT_DIR$ -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1c1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="单元测试(批处理模式)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1c1/Unity.app/Contents/MacOS/Unity" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath $PROJECT_DIR$ -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="附加到 Unity 编辑器" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="附加到 Unity 编辑器并运行" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
@@ -34,10 +408,36 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1712314785957</updated>
+      <workItem from="1712328274480" duration="170000" />
+      <workItem from="1712328453097" duration="3166000" />
+      <workItem from="1712370508736" duration="188000" />
+      <workItem from="1712370734780" duration="3245000" />
+      <workItem from="1712374596112" duration="63000" />
+      <workItem from="1712374666080" duration="752000" />
+      <workItem from="1712375428925" duration="590000" />
+      <workItem from="1712385234794" duration="637000" />
+      <workItem from="1712385875791" duration="748000" />
+      <workItem from="1712386638375" duration="5000" />
+      <workItem from="1712386664083" duration="343000" />
+      <workItem from="1712387175466" duration="1450000" />
+      <workItem from="1712389698281" duration="6738000" />
+      <workItem from="1712490683688" duration="2671000" />
+      <workItem from="1712495639741" duration="1935000" />
+      <workItem from="1712583030505" duration="997000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

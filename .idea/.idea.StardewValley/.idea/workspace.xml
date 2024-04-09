@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Sprite/Water.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Water.aseprite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/GridKit/EasyGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFramework/Toolkits/_CoreKit/GridKit/EasyGrid.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/Ripe.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/Ripe.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Ripe.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/Ripe.aseprite.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/SoilData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/SoilData.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +141,7 @@
       <workItem from="1712389698281" duration="6738000" />
       <workItem from="1712490683688" duration="2671000" />
       <workItem from="1712495639741" duration="1935000" />
-      <workItem from="1712583030505" duration="6536000" />
+      <workItem from="1712583030505" duration="9435000" />
     </task>
     <servers />
   </component>

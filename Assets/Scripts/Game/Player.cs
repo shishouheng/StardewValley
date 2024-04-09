@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using UnityEngine;
 using QFramework;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
@@ -16,17 +17,45 @@ namespace ProjectIndieFarm
         {
             Global.Days.Register(day =>
             {
+                var soilDatas = FindObjectOfType<GridController>().ShowGrid;
+
+                var smallPlants = SceneManager.GetActiveScene().GetRootGameObjects()
+                    .Where(gameObj => gameObj.name.StartsWith("SmallPlant"));
+                foreach (var smallPlant in smallPlants)
+                {
+                    var tilePos = grid.WorldToCell(smallPlant.transform.position);
+                    var tileData = soilDatas[tilePos.x, tilePos.y];
+                    //浇水了在天数变更时才能发芽 
+                    if (tileData != null && tileData.Watered)
+                    {
+                        ResController.Instance.ripePrefab.Instantiate().Position(smallPlant.transform.position);
+                        smallPlant.DestroySelf();
+                    }
+                }
+                
                 var seeds=SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Seed"));
                 foreach (var seed in seeds)
                 {
                     var tilePos = grid.WorldToCell(seed.transform.position);
-                    var tileData = FindObjectOfType<GridController>().ShowGrid[tilePos.x, tilePos.y];
-                    //浇水了在天数变更时才能发芽
+                    var tileData = soilDatas[tilePos.x, tilePos.y];
+                    //浇水了在天数变更时才能发芽 
                     if (tileData != null && tileData.Watered)
                     {
                         ResController.Instance.smallPlantPrefab.Instantiate().Position(seed.transform.position);
                         seed.DestroySelf();
                     }
+                }
+                
+                soilDatas.ForEach(soilDatas=>
+                {
+                    if (soilDatas != null)
+                    {
+                        soilDatas.Watered = false;
+                    }
+                });
+                foreach (var water in SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Water")))
+                {
+                    water.DestroySelf();
                 }
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
         }

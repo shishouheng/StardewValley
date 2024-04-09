@@ -848,6 +848,7 @@ MonoBehaviour:
   seedPrefab: {fileID: 1565974216622628520, guid: 3984fc5003e474c9886f461dbee7eff2, type: 3}
   waterPrefab: {fileID: 3422299070150361241, guid: 0b7da039808e648d6b775157dca86b3c, type: 3}
   smallPlantPrefab: {fileID: 8675656299721921286, guid: 5613c17f7429f4b4c8498dcae0a9f870, type: 3}
+  ripePrefab: {fileID: 1785327684640784379, guid: 8193a6223d3964d5fbd6c39718876a83, type: 3}
 --- !u!4 &1000624453
 Transform:
   m_ObjectHideFlags: 0

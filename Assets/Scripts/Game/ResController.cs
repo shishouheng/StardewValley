@@ -8,6 +8,7 @@ namespace ProjectIndieFarm
 		public GameObject seedPrefab;
 		public GameObject waterPrefab;
 		public GameObject smallPlantPrefab;
+		public GameObject ripePrefab;
 
 		public static ResController Instance => MonoSingletonProperty<ResController>.Instance;
 		

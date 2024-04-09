@@ -2,6 +2,7 @@ namespace ProjectIndieFarm
 {
     public class SoilData
     {
-        public bool hasPlant { get; set; } = false;
+        public bool HasPlant { get; set; } = false;
+        public bool Watered { get; set; } = false;
     }
 }

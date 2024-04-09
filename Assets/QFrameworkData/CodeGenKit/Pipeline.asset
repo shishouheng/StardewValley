@@ -20,10 +20,10 @@ MonoBehaviour:
     NameToFullName: []
     BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: ResController
+    ClassName: TileSelectController
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class ResController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class TileSelectController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:ea461d12-f0cf-4692-9a3c-d1892a7bc2c0\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class ResController\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:447dba04-bf0a-4aa5-9d64-363aaccadde2\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class TileSelectController\n\t{\n\n\t}\n}\n"

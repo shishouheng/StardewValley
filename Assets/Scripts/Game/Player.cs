@@ -1,5 +1,8 @@
+using System;
+using System.Linq;
 using UnityEngine;
 using QFramework;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 namespace ProjectIndieFarm
@@ -9,8 +12,41 @@ namespace ProjectIndieFarm
         public Grid grid;
         public Tilemap tileMap;
 
+        private void Start()
+        {
+            Global.Days.Register(day =>
+            {
+                var seeds=SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Seed"));
+                foreach (var seed in seeds)
+                {
+                    var tilePos = grid.WorldToCell(seed.transform.position);
+                    var tileData = FindObjectOfType<GridController>().ShowGrid[tilePos.x, tilePos.y];
+                    //浇水了在天数变更时才能发芽
+                    if (tileData != null && tileData.Watered)
+                    {
+                        ResController.Instance.smallPlantPrefab.Instantiate().Position(seed.transform.position);
+                        seed.DestroySelf();
+                    }
+                }
+            }).UnRegisterWhenGameObjectDestroyed(gameObject);
+        }
+
+        private void OnGUI()
+        {
+            IMGUIHelper.SetDesignResolution(640,340);
+            GUILayout.Space(10);
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
+            GUILayout.Label("天数"+Global.Days.Value);
+            GUILayout.EndHorizontal();
+        }
+
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Global.Days.Value++;
+            }
             var cellPos = grid.WorldToCell(transform.position);
             var gridData = FindObjectOfType<GridController>().ShowGrid;
             var tileWorldPos = grid.CellToWorld(cellPos);

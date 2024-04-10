@@ -810,6 +810,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &822081132
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822081134}
+  - component: {fileID: 822081133}
+  m_Layer: 0
+  m_Name: PlantController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &822081133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822081132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3d43fa6f068049509d9a22dcfea7d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Namespace: ProjectIndieFarm
+  ScriptName: PlantController
+  ScriptsFolder: Assets/Scripts/Game
+  GeneratePrefab: 0
+  PrefabFolder: Assets/Art/Prefab
+  ArchitectureFullTypeName: 
+--- !u!4 &822081134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822081132}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000624451
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +899,10 @@ MonoBehaviour:
   waterPrefab: {fileID: 3422299070150361241, guid: 0b7da039808e648d6b775157dca86b3c, type: 3}
   smallPlantPrefab: {fileID: 8675656299721921286, guid: 5613c17f7429f4b4c8498dcae0a9f870, type: 3}
   ripePrefab: {fileID: 1785327684640784379, guid: 8193a6223d3964d5fbd6c39718876a83, type: 3}
+  plantPrefab: {fileID: 8675656299721921286, guid: 5445e84cb19744b62afa2868cfa161a1, type: 3}
+  seedSprite: {fileID: 3130458453735476931, guid: 7138ed4c479b249498cdc2e076c84fb8, type: 3}
+  smallPlantSprite: {fileID: 4883873410873321957, guid: d1d18471cae1b4ee99925cd8d1162674, type: 3}
+  ripeSprite: {fileID: 3914606278354071613, guid: ce80f1faf2ced4be4a56836b2d09a83e, type: 3}
 --- !u!4 &1000624453
 Transform:
   m_ObjectHideFlags: 0
@@ -1043,3 +1097,4 @@ SceneRoots:
   - {fileID: 1719233336}
   - {fileID: 1000624453}
   - {fileID: 1761893331}
+  - {fileID: 822081134}

@@ -15,15 +15,15 @@ MonoBehaviour:
   CurrentTask:
     ShowLog: 0
     Status: 1
-    GameObject: {fileID: 0}
+    GameObject: {fileID: 8675656299721921286, guid: 5445e84cb19744b62afa2868cfa161a1, type: 3}
     From: 0
     NameToFullName: []
     BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: TileSelectController
+    ClassName: Plant
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class TileSelectController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class Plant : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:447dba04-bf0a-4aa5-9d64-363aaccadde2\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class TileSelectController\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:d5511621-aaf1-46dc-a2c5-40b4ab7cd5d9\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class Plant\n\t{\n\n\t}\n}\n"

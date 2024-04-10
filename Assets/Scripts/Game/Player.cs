@@ -18,39 +18,32 @@ namespace ProjectIndieFarm
             Global.Days.Register(day =>
             {
                 var soilDatas = FindObjectOfType<GridController>().ShowGrid;
-
-                var smallPlants = SceneManager.GetActiveScene().GetRootGameObjects()
-                    .Where(gameObj => gameObj.name.StartsWith("SmallPlant"));
-                foreach (var smallPlant in smallPlants)
-                {
-                    var tilePos = grid.WorldToCell(smallPlant.transform.position);
-                    var tileData = soilDatas[tilePos.x, tilePos.y];
-                    //浇水了在天数变更时才能发芽 
-                    if (tileData != null && tileData.Watered)
-                    {
-                        ResController.Instance.ripePrefab.Instantiate().Position(smallPlant.transform.position);
-                        smallPlant.DestroySelf();
-                    }
-                }
                 
-                var seeds=SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Seed"));
-                foreach (var seed in seeds)
+                PlantController.Instance.plants.ForEach((x,y,plant) =>
                 {
-                    var tilePos = grid.WorldToCell(seed.transform.position);
-                    var tileData = soilDatas[tilePos.x, tilePos.y];
-                    //浇水了在天数变更时才能发芽 
-                    if (tileData != null && tileData.Watered)
+                    if (plant)
                     {
-                        ResController.Instance.smallPlantPrefab.Instantiate().Position(seed.transform.position);
-                        seed.DestroySelf();
+                        if (plant.state == PlantStates.Seed)
+                        {
+                            if (soilDatas[x, y].Watered)
+                            {
+                                //切换到smallPlant状态
+                                plant.SetState(PlantStates.Small);
+                            }
+                        }
+                        else if (plant.state == PlantStates.Small)
+                        {
+                            if(soilDatas[x,y].Watered)
+                                plant.SetState(PlantStates.Ripe);
+                        }
                     }
-                }
-                
+                });
+              
                 soilDatas.ForEach(soilDatas=>
                 {
                     if (soilDatas != null)
                     {
-                        soilDatas.Watered = false;
+                        soilDatas.Watered = false; 
                     }
                 });
                 foreach (var water in SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Water")))
@@ -107,7 +100,11 @@ namespace ProjectIndieFarm
                     //耕地了 放种子
                     else if (gridData[cellPos.x, cellPos.y].HasPlant != true)
                     {
-                        ResController.Instance.seedPrefab.Instantiate().Position(tileWorldPos);
+                        var plantGameObject=ResController.Instance.plantPrefab.Instantiate().Position(tileWorldPos);
+                        var plant = plantGameObject.GetComponent<Plant>();
+                        plant.xCell = cellPos.x;
+                        plant.yCell = cellPos.y;
+                        PlantController.Instance.plants[cellPos.x, cellPos.y] = plantGameObject.GetComponent<Plant>();
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
                     }
                     else

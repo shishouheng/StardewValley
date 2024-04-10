@@ -8,7 +8,7 @@ namespace  ProjectIndieFarm
     public class Global : MonoBehaviour
     {
         /// <summary>
-        /// 默认从第一天开始算
+        /// 日期
         /// </summary>
         public static BindableProperty<int> Days = new BindableProperty<int>(1);
     }

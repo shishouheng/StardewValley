@@ -61,6 +61,11 @@ namespace ProjectIndieFarm
             GUILayout.Space(10);
             GUILayout.Label("天数"+Global.Days.Value);
             GUILayout.EndHorizontal();
+            
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
+            GUILayout.Label("果实"+Global.FruitCount.Value);
+            GUILayout.EndHorizontal();
         }
 
         private void Update()
@@ -107,8 +112,14 @@ namespace ProjectIndieFarm
                         PlantController.Instance.plants[cellPos.x, cellPos.y] = plantGameObject.GetComponent<Plant>();
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
                     }
-                    else
+                    else if(gridData[cellPos.x,cellPos.y].HasPlant)
                     {
+                        if (gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe)
+                        {
+                            Destroy(PlantController.Instance.plants[cellPos.x,cellPos.y].gameObject);
+                            gridData[cellPos.x, cellPos.y].HasPlant = false;
+                            Global.FruitCount.Value++;
+                        }
                     }
                 }
             }
@@ -139,6 +150,11 @@ namespace ProjectIndieFarm
                         }
                     }
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SceneManager.LoadScene("GamePass");
             }
         }
     }

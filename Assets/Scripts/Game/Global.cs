@@ -11,6 +11,11 @@ namespace  ProjectIndieFarm
         /// 日期
         /// </summary>
         public static BindableProperty<int> Days = new BindableProperty<int>(1);
+
+        /// <summary>
+        /// 收获的果实数量
+        /// </summary>
+        public static BindableProperty<int> FruitCount = new BindableProperty<int>(0);
     }
 }
 

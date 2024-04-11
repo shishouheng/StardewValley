@@ -5,7 +5,7 @@ namespace ProjectIndieFarm
 {
 	public enum PlantStates
 	{
-		Seed,Small,Ripe
+		Seed,Small,Ripe,Old
 	}
 	public partial class PlantController : ViewController,ISingleton
 	{

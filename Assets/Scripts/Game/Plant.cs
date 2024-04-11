@@ -28,6 +28,9 @@ namespace ProjectIndieFarm
 					case PlantStates.Seed:
 						currentSprite = ResController.Instance.seedSprite;
 						break;
+					case PlantStates.Old:
+						currentSprite = ResController.Instance.oldSprite;
+						break;
 					default:
 						currentSprite = ResController.Instance.seedSprite;
 						break;

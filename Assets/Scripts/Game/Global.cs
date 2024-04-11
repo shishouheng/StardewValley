@@ -16,6 +16,11 @@ namespace  ProjectIndieFarm
         /// 收获的果实数量
         /// </summary>
         public static BindableProperty<int> FruitCount = new BindableProperty<int>(0);
+
+        /// <summary>
+        /// 当前工具
+        /// </summary>
+        public static BindableProperty<string> CurrentToolName = new BindableProperty<string>("手");
     }
 }
 

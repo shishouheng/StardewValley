@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using QFramework;
 using Unity.VisualScripting;
@@ -18,8 +19,8 @@ namespace ProjectIndieFarm
             Global.Days.Register(day =>
             {
                 var soilDatas = FindObjectOfType<GridController>().ShowGrid;
-                
-                PlantController.Instance.plants.ForEach((x,y,plant) =>
+
+                PlantController.Instance.plants.ForEach((x, y, plant) =>
                 {
                     if (plant)
                     {
@@ -33,20 +34,21 @@ namespace ProjectIndieFarm
                         }
                         else if (plant.state == PlantStates.Small)
                         {
-                            if(soilDatas[x,y].Watered)
+                            if (soilDatas[x, y].Watered)
                                 plant.SetState(PlantStates.Ripe);
                         }
                     }
                 });
-              
-                soilDatas.ForEach(soilDatas=>
+
+                soilDatas.ForEach(soilDatas =>
                 {
                     if (soilDatas != null)
                     {
-                        soilDatas.Watered = false; 
+                        soilDatas.Watered = false;
                     }
                 });
-                foreach (var water in SceneManager.GetActiveScene().GetRootGameObjects().Where(gameObj => gameObj.name.StartsWith("Water")))
+                foreach (var water in SceneManager.GetActiveScene().GetRootGameObjects()
+                             .Where(gameObj => gameObj.name.StartsWith("Water")))
                 {
                     water.DestroySelf();
                 }
@@ -55,17 +57,29 @@ namespace ProjectIndieFarm
 
         private void OnGUI()
         {
-            IMGUIHelper.SetDesignResolution(640,340);
+            IMGUIHelper.SetDesignResolution(640, 340);
             GUILayout.Space(10);
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label("天数"+Global.Days.Value);
+            GUILayout.Label("天数" + Global.Days.Value);
             GUILayout.EndHorizontal();
-            
+
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label("果实"+Global.FruitCount.Value);
+            GUILayout.Label("果实" + Global.FruitCount.Value);
             GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
+            GUILayout.Label("浇水：E");
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
+            GUILayout.Label($"当前工具：{Global.CurrentToolName.Value}");
+            GUILayout.EndHorizontal();
+
+            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.锄头");
         }
 
         private void Update()
@@ -74,6 +88,7 @@ namespace ProjectIndieFarm
             {
                 Global.Days.Value++;
             }
+
             var cellPos = grid.WorldToCell(transform.position);
             var gridData = FindObjectOfType<GridController>().ShowGrid;
             var tileWorldPos = grid.CellToWorld(cellPos);
@@ -96,27 +111,29 @@ namespace ProjectIndieFarm
                 if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)
                 {
                     //没耕地
-                    if (gridData[cellPos.x, cellPos.y] == null)
+                    if (gridData[cellPos.x, cellPos.y] == null && Global.CurrentToolName.Value == "锄头")
                     {
                         //开垦
                         tileMap.SetTile(cellPos, FindObjectOfType<GridController>().pen);
                         gridData[cellPos.x, cellPos.y] = new SoilData();
                     }
+
+                    return;
                     //耕地了 放种子
-                    else if (gridData[cellPos.x, cellPos.y].HasPlant != true)
+                    if (gridData[cellPos.x, cellPos.y].HasPlant != true)
                     {
-                        var plantGameObject=ResController.Instance.plantPrefab.Instantiate().Position(tileWorldPos);
+                        var plantGameObject = ResController.Instance.plantPrefab.Instantiate().Position(tileWorldPos);
                         var plant = plantGameObject.GetComponent<Plant>();
                         plant.xCell = cellPos.x;
                         plant.yCell = cellPos.y;
                         PlantController.Instance.plants[cellPos.x, cellPos.y] = plantGameObject.GetComponent<Plant>();
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
                     }
-                    else if(gridData[cellPos.x,cellPos.y].HasPlant)
+                    else if (gridData[cellPos.x, cellPos.y].HasPlant)
                     {
                         if (gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe)
                         {
-                            Destroy(PlantController.Instance.plants[cellPos.x,cellPos.y].gameObject);
+                            Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
                             gridData[cellPos.x, cellPos.y].HasPlant = false;
                             Global.FruitCount.Value++;
                         }
@@ -155,6 +172,16 @@ namespace ProjectIndieFarm
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene("GamePass");
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Global.CurrentToolName.Value = "手";
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Global.CurrentToolName.Value = "锄头";
             }
         }
     }

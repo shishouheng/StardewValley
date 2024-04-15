@@ -1,9 +1,6 @@
-using System;
 using System.Linq;
-using HutongGames.PlayMaker.Actions;
 using UnityEngine;
 using QFramework;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
@@ -76,10 +73,10 @@ namespace ProjectIndieFarm
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label($"当前工具：{Global.CurrentToolName.Value}");
+            GUILayout.Label($"当前工具：{Global.CurrentTool.Value}");
             GUILayout.EndHorizontal();
 
-            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.锄头");
+            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.铁锹  3.种子");
         }
 
         private void Update()
@@ -95,10 +92,24 @@ namespace ProjectIndieFarm
             tileWorldPos.x += grid.cellSize.x * 0.5f;
             //tileWorldPos.y += grid.cellSize.y * 0.5f;
 
+            //选择框显示
             if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)
             {
-                TileSelectController.Instance.Position(tileWorldPos);
-                TileSelectController.Instance.Show();
+                if (Global.CurrentTool.Value == Constant.TOOL_SHOVEL && gridData[cellPos.x, cellPos.y] == null)
+                {
+                    TileSelectController.Instance.Position(tileWorldPos);
+                    TileSelectController.Instance.Show();
+                }
+                else if (gridData[cellPos.x, cellPos.y] != null && gridData[cellPos.x, cellPos.y].HasPlant != true &&
+                         Global.CurrentTool.Value == Constant.TOOL_SEED)
+                {
+                    TileSelectController.Instance.Position(tileWorldPos);
+                    TileSelectController.Instance.Show();
+                }
+                else
+                {
+                    TileSelectController.Instance.Hide();
+                }
             }
 
             else
@@ -111,16 +122,17 @@ namespace ProjectIndieFarm
                 if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)
                 {
                     //没耕地
-                    if (gridData[cellPos.x, cellPos.y] == null && Global.CurrentToolName.Value == "锄头")
+                    if (gridData[cellPos.x, cellPos.y] == null && Global.CurrentTool.Value == Constant.TOOL_SHOVEL)
                     {
                         //开垦
                         tileMap.SetTile(cellPos, FindObjectOfType<GridController>().pen);
                         gridData[cellPos.x, cellPos.y] = new SoilData();
                     }
 
-                    return;
                     //耕地了 放种子
-                    if (gridData[cellPos.x, cellPos.y].HasPlant != true)
+                    else if (gridData[cellPos.x, cellPos.y] != null &&
+                             gridData[cellPos.x, cellPos.y].HasPlant != true &&
+                             Global.CurrentTool.Value == Constant.TOOL_SEED)
                     {
                         var plantGameObject = ResController.Instance.plantPrefab.Instantiate().Position(tileWorldPos);
                         var plant = plantGameObject.GetComponent<Plant>();
@@ -129,7 +141,10 @@ namespace ProjectIndieFarm
                         PlantController.Instance.plants[cellPos.x, cellPos.y] = plantGameObject.GetComponent<Plant>();
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
                     }
-                    else if (gridData[cellPos.x, cellPos.y].HasPlant)
+
+                    return;
+
+                    if (gridData[cellPos.x, cellPos.y].HasPlant)
                     {
                         if (gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe)
                         {
@@ -176,12 +191,17 @@ namespace ProjectIndieFarm
 
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                Global.CurrentToolName.Value = "手";
+                Global.CurrentTool.Value = Constant.TOOL_HAND;
             }
 
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
-                Global.CurrentToolName.Value = "锄头";
+                Global.CurrentTool.Value = Constant.TOOL_SHOVEL;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Global.CurrentTool.Value = Constant.TOOL_SEED;
             }
         }
     }

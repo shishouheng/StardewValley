@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DeltegatePractice.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DeltegatePractice.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GameStart.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GameStart.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameStartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameStartController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +29,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/96/a4a17425/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/f5/5886bf80/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc0ec58d048641a1990f7b5fd4d13318174200/4d/2848c15b/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DeltegatePractice.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GamePassController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameStartController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -140,7 +149,7 @@
       <workItem from="1712490683688" duration="2671000" />
       <workItem from="1712495639741" duration="1935000" />
       <workItem from="1712583030505" duration="14784000" />
-      <workItem from="1712841006632" duration="2095000" />
+      <workItem from="1712841006632" duration="15330000" />
     </task>
     <servers />
   </component>

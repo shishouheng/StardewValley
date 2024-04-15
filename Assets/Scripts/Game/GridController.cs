@@ -11,6 +11,8 @@ namespace ProjectIndieFarm
 		public TileBase pen;
 		private void Start()
 		{
+			mShowGrid[1, 1] = new SoilData();
+			mShowGrid[3, 5] = new SoilData();
 			mShowGrid.ForEach((x, y, data) =>
 			{
 				if (data!=null)

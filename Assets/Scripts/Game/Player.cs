@@ -76,7 +76,7 @@ namespace ProjectIndieFarm
             GUILayout.Label($"当前工具：{Global.CurrentTool.Value}");
             GUILayout.EndHorizontal();
 
-            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.铁锹  3.种子");
+            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.铁锹  3.种子  4.花洒");
         }
 
         private void Update()
@@ -102,6 +102,21 @@ namespace ProjectIndieFarm
                 }
                 else if (gridData[cellPos.x, cellPos.y] != null && gridData[cellPos.x, cellPos.y].HasPlant != true &&
                          Global.CurrentTool.Value == Constant.TOOL_SEED)
+                {
+                    TileSelectController.Instance.Position(tileWorldPos);
+                    TileSelectController.Instance.Show();
+                }
+                else if (gridData[cellPos.x, cellPos.y] != null &&
+                         gridData[cellPos.x, cellPos.y].Watered != true &&
+                         Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
+                {
+                    TileSelectController.Instance.Position(tileWorldPos);
+                    TileSelectController.Instance.Show();
+                }
+                else if (gridData[cellPos.x, cellPos.y] != null &&
+                         gridData[cellPos.x, cellPos.y].HasPlant &&
+                         gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
+                         Global.CurrentTool.Value == Constant.TOOL_HAND)
                 {
                     TileSelectController.Instance.Position(tileWorldPos);
                     TileSelectController.Instance.Show();
@@ -142,16 +157,25 @@ namespace ProjectIndieFarm
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
                     }
 
-                    return;
 
-                    if (gridData[cellPos.x, cellPos.y].HasPlant)
+                    else if (gridData[cellPos.x, cellPos.y] != null &&
+                             gridData[cellPos.x, cellPos.y].Watered != true &&
+                             Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
                     {
-                        if (gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe)
-                        {
-                            Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
-                            gridData[cellPos.x, cellPos.y].HasPlant = false;
-                            Global.FruitCount.Value++;
-                        }
+                        //浇水
+                        ResController.Instance.waterPrefab.Instantiate().Position(tileWorldPos);
+                        gridData[cellPos.x, cellPos.y].Watered = true;
+                    }
+
+
+                    else if (gridData[cellPos.x, cellPos.y] != null &&
+                             gridData[cellPos.x, cellPos.y].HasPlant &&
+                             gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
+                             Global.CurrentTool.Value == Constant.TOOL_HAND)
+                    {
+                        Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
+                        gridData[cellPos.x, cellPos.y].HasPlant = false;
+                        Global.FruitCount.Value++;
                     }
                 }
             }
@@ -168,21 +192,6 @@ namespace ProjectIndieFarm
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)
-                {
-                    //没耕地
-                    if (gridData[cellPos.x, cellPos.y] != null)
-                    {
-                        if (gridData[cellPos.x, cellPos.y].Watered != true)
-                        {
-                            ResController.Instance.waterPrefab.Instantiate().Position(tileWorldPos);
-                            gridData[cellPos.x, cellPos.y].Watered = true;
-                        }
-                    }
-                }
-            }
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -202,6 +211,11 @@ namespace ProjectIndieFarm
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 Global.CurrentTool.Value = Constant.TOOL_SEED;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                Global.CurrentTool.Value = Constant.TOOL_WATERING_SCAN;
             }
         }
     }

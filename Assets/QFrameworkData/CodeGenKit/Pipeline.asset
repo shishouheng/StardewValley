@@ -20,10 +20,10 @@ MonoBehaviour:
     NameToFullName: []
     BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: GamePassController
+    ClassName: GameController
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class GamePassController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class GameController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:9d38ac37-7cc4-4d58-94c3-88c6a44a22cd\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class GamePassController\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:6560b64e-f470-4028-b684-2a8fc5d61f7c\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class GameController\n\t{\n\n\t}\n}\n"

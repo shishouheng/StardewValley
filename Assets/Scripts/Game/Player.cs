@@ -15,6 +15,8 @@ namespace ProjectIndieFarm
         {
             Global.Days.Register(day =>
             {
+                //天数变跟时重置当天的成熟果实数量为0
+                Global.RipeCountAndHarverstInCurrentDay.Value = 0;
                 var soilDatas = FindObjectOfType<GridController>().ShowGrid;
 
                 PlantController.Instance.plants.ForEach((x, y, plant) =>
@@ -32,7 +34,10 @@ namespace ProjectIndieFarm
                         else if (plant.state == PlantStates.Small)
                         {
                             if (soilDatas[x, y].Watered)
+                            {
+                                //切换到成熟状态
                                 plant.SetState(PlantStates.Ripe);
+                            }
                         }
                     }
                 });
@@ -173,6 +178,7 @@ namespace ProjectIndieFarm
                              gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
                              Global.CurrentTool.Value == Constant.TOOL_HAND)
                     {
+                        Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);   
                         Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
                         gridData[cellPos.x, cellPos.y].HasPlant = false;
                         Global.FruitCount.Value++;

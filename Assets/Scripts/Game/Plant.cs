@@ -10,11 +10,20 @@ namespace ProjectIndieFarm
 		private PlantStates mState = PlantStates.Seed;
 		public PlantStates state =>mState;
 
+		/// <summary>
+		/// 成熟的日期（第几天）
+		/// </summary>
+		public int ripeDay = -1;
+
 		public void SetState(PlantStates newState)
 		{
 			Sprite currentSprite;
 			if (mState != newState)
 			{
+				if (mState == PlantStates.Small && newState == PlantStates.Ripe)
+				{
+					ripeDay = Global.Days.Value;
+				}
 				mState = newState;
 				//切换表现
 				switch (newState)

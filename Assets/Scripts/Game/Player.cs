@@ -76,8 +76,6 @@ namespace ProjectIndieFarm
             GUILayout.Space(10);
             GUILayout.Label($"当前工具：{Global.CurrentTool.Value}");
             GUILayout.EndHorizontal();
-
-            GUI.Label(new Rect(10, 336, 200, 24), "1.手  2.铁锹  3.种子  4.花洒");
         }
 
         private void Update()
@@ -207,29 +205,6 @@ namespace ProjectIndieFarm
                 SceneManager.LoadScene("GamePass");
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                Global.CurrentTool.Value = Constant.TOOL_HAND;
-                AudioController.Get.SFXTake.Play();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                Global.CurrentTool.Value = Constant.TOOL_SHOVEL;
-                AudioController.Get.SFXTake.Play();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                Global.CurrentTool.Value = Constant.TOOL_SEED;
-                AudioController.Get.SFXTake.Play();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                Global.CurrentTool.Value = Constant.TOOL_WATERING_SCAN;
-                AudioController.Get.SFXTake.Play();
-            }
         }
     }
 }

@@ -19,36 +19,25 @@ MonoBehaviour:
     From: 0
     NameToFullName: []
     BindInfos:
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXTake
-      MemberName: SFXTake
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXShoveDig
-      MemberName: SFXShoveDig
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXPutSeed
-      MemberName: SFXPutSeed
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXWater
-      MemberName: SFXWater
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXHarvest
-      MemberName: SFXHarvest
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXChallengeFinish
-      MemberName: SFXChallengeFinish
-    - TypeName: UnityEngine.AudioSource
-      PathToRoot: SFXNextDay
-      MemberName: SFXNextDay
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: Btn1
+      MemberName: Btn1
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: Btn2
+      MemberName: Btn2
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: Btn3
+      MemberName: Btn3
+    - TypeName: UnityEngine.UI.Button
+      PathToRoot: Btn4
+      MemberName: Btn4
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: AudioController
+    ClassName: UIToolBar
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class AudioController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class UIToolBar : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:5805b66e-c707-44b3-9c6c-db54161f9f8c\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class AudioController\n\t{\n\n\t\tpublic
-      UnityEngine.AudioSource SFXTake;\n\n\t\tpublic UnityEngine.AudioSource SFXShoveDig;\n\n\t\tpublic
-      UnityEngine.AudioSource SFXPutSeed;\n\n\t\tpublic UnityEngine.AudioSource SFXWater;\n\n\t\tpublic
-      UnityEngine.AudioSource SFXHarvest;\n\n\t\tpublic UnityEngine.AudioSource SFXChallengeFinish;\n\n\t\tpublic
-      UnityEngine.AudioSource SFXNextDay;\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:9932f551-802c-48d3-8d7d-32403948804a\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class UIToolBar\n\t{\n\n\t\tpublic UnityEngine.UI.Button
+      Btn1;\n\n\t\tpublic UnityEngine.UI.Button Btn2;\n\n\t\tpublic UnityEngine.UI.Button
+      Btn3;\n\n\t\tpublic UnityEngine.UI.Button Btn4;\n\n\t}\n}\n"

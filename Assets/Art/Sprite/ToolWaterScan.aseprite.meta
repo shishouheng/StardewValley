@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eefe8df5652d04657b5039564b88d50e
+guid: 474ae9577dfe446168adb4cdc6d12750
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638493311895266720
+  platformSettingsDirtyTick: 638482083394384830
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -121,18 +121,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: 030.ToolHand
+  - name: ToolWaterScan
     originalName: 
-    pivot: {x: 0.7368421, y: -0.1}
+    pivot: {x: 0.5714286, y: -0.07692308}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 19
-      height: 20
-    spriteID: 79b74a5b645ac435a9b55b4c4b67ec6f
+      width: 14
+      height: 13
+    spriteID: 5ae183133621b46538339f8f897af984
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,20 +144,20 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: -1720674570
-    name: 030.ToolHand
+    guid: 247879914
+    name: ToolWaterScan
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: 030.ToolHand
+    - name: ToolWaterScan
       frameIndex: 0
       cellRect:
-        x: -6
-        y: 2
-        width: 19
-        height: 20
-      spriteId: 79b74a5b645ac435a9b55b4c4b67ec6f
+        x: 0
+        y: 1
+        width: 14
+        height: 13
+      spriteId: 5ae183133621b46538339f8f897af984
     linkedCells: []
     parentIndex: -1
   platformSettings:

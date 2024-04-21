@@ -25,6 +25,8 @@ namespace ProjectIndieFarm
             //注册挑战完成的事件
             Global.OnChallengeFinished.Register(challenge =>
             {
+                AudioController.Get.SFXChallengeFinish.Play();
+
                 //某个挑战完成后检查是否所有挑战都已经完成，如果都完成则跳转到结束界面
                 if (Global.Challenges.All(challenge => challenge.state == Challenge.States.Finished))
                 {

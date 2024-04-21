@@ -85,6 +85,7 @@ namespace ProjectIndieFarm
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Global.Days.Value++;
+                AudioController.Get.SFXNextDay.Play();
             }
 
             var cellPos = grid.WorldToCell(transform.position);
@@ -157,6 +158,7 @@ namespace ProjectIndieFarm
                         plant.yCell = cellPos.y;
                         PlantController.Instance.plants[cellPos.x, cellPos.y] = plantGameObject.GetComponent<Plant>();
                         gridData[cellPos.x, cellPos.y].HasPlant = true;
+                        AudioController.Get.SFXPutSeed.Play();
                     }
 
 
@@ -167,6 +169,7 @@ namespace ProjectIndieFarm
                         //浇水
                         ResController.Instance.waterPrefab.Instantiate().Position(tileWorldPos);
                         gridData[cellPos.x, cellPos.y].Watered = true;
+                        AudioController.Get.SFXWater.Play();
                     }
 
 
@@ -181,6 +184,7 @@ namespace ProjectIndieFarm
                         gridData[cellPos.x, cellPos.y].HasPlant = false;
                         Global.HarverstCountInCurrentDay.Value++;
                         Global.FruitCount.Value++;
+                        AudioController.Get.SFXHarvest.Play();
                     }
                 }
             }

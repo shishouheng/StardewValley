@@ -1,6 +1,6 @@
 namespace ProjectIndieFarm
 {
-    public class ChallengeHarvestFirstFruit: Challenge
+    public class ChallengeHarvestOneFruit: Challenge
     {
         public override string Name { get; } = "收获第一个果实";
 
@@ -11,7 +11,7 @@ namespace ProjectIndieFarm
 
         public override bool CheckFinish()
         {
-            return Global.FruitCount.Value > 0;
+            return Global.Days.Value != startDate &&Global.HarverstCountInCurrentDay.Value > 0;
         }
 
         public override void OnFinish()

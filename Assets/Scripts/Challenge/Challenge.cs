@@ -10,6 +10,8 @@ namespace ProjectIndieFarm
         }
 
         public States state = States.NotStart;
+
+        public int startDate = 0;
         public abstract string Name { get; }
 
         // 挑战开始时的逻辑

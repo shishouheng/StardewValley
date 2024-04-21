@@ -2,6 +2,8 @@ namespace ProjectIndieFarm
 {
     public class ChallengeRipeAndHarverstFiveFruitsInOneDay: Challenge
     {
+        public override string Name { get; } = "收获同一天的五个果实";
+
         public override void OnStart()
         {
             

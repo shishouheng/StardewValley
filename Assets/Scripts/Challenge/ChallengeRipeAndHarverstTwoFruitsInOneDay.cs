@@ -6,6 +6,8 @@ namespace ProjectIndieFarm
     //一天成熟并且收获两枚果实的挑战
     public class ChallengeRipeAndHarverstTwoFruitsInOneDay: Challenge
     {
+        public override string Name { get; } = "收获同一天的两个果实";
+
         public override void OnStart()
         {
             

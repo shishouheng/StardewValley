@@ -28,7 +28,9 @@ namespace  ProjectIndieFarm
 
         public static List<Challenge> Challenges = new List<Challenge>()
         {
-            new ChallengeRipeAndHarverstTwoFruitsInOneDay()
+            new ChallengeHarvestFirstFruit(),
+            new ChallengeRipeAndHarverstTwoFruitsInOneDay(),
+            new ChallengeRipeAndHarverstFiveFruitsInOneDay()
         };
 
         /// <summary>
@@ -36,6 +38,9 @@ namespace  ProjectIndieFarm
         /// </summary>
         public static EasyEvent<Plant> OnPlantHarvest = new EasyEvent<Plant>();
 
+        /// <summary>
+        /// 挑战完成事件
+        /// </summary>
         public static EasyEvent<Challenge> OnChallengeFinished = new EasyEvent<Challenge>();
     }
 

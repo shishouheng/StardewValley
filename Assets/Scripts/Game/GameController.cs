@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 using QFramework;
@@ -10,19 +9,28 @@ namespace ProjectIndieFarm
     {
         void Start()
         {
-            Global.OnChallengeFinished.Register(challenge => { Debug.Log(challenge.GetType().Name + "挑战完成"); });
+            //监听成熟的植物是否时当天成熟并且当天收割的
+            Global.OnPlantHarvest.Register(plant =>
+            {
+                if (plant.ripeDay == Global.Days.Value)
+                {
+                    Global.RipeCountAndHarverstInCurrentDay.Value++;
+                }
+            }).UnRegisterWhenGameObjectDestroyed(this);
+            //挑战完成则输出xxx挑战完成
+            Global.OnChallengeFinished.Register(challenge =>
+            {
+                Debug.Log(challenge.GetType().Name + "挑战完成");
 
-
-            // Global.FruitCount.Register(fruitCount =>
-            // {
-            // 	if (fruitCount >= 1)
-            // 	{
-            // 		ActionKit.Delay(1.0f, (() =>
-            // 		{
-            // 			SceneManager.LoadScene("GamePass");
-            // 		})).Start(this);
-            // 	}
-            // }).UnRegisterWhenGameObjectDestroyed(this);
+                //某个挑战完成后检查是否所有挑战都已经完成，如果都完成则跳转到结束界面
+                if (Global.Challenges.All(challenge => challenge.state == Challenge.States.Finished))
+                {
+                    ActionKit.Delay(0.5f, () =>
+                    {
+                        SceneManager.LoadScene("GamePass");
+                    }).Start(this);
+                }
+            });
         }
 
         private void Update()

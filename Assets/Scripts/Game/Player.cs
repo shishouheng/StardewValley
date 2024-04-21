@@ -178,6 +178,7 @@ namespace ProjectIndieFarm
                              gridData[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
                              Global.CurrentTool.Value == Constant.TOOL_HAND)
                     {
+                        //触发收割果实事件，然后会在GameController中持续检测该事件是否完成，完成了则结束改事件
                         Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);   
                         Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
                         gridData[cellPos.x, cellPos.y].HasPlant = false;

@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.Designer.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +150,7 @@
       <workItem from="1712495639741" duration="1935000" />
       <workItem from="1712583030505" duration="14784000" />
       <workItem from="1712841006632" duration="27809000" />
-      <workItem from="1713686778856" duration="11221000" />
+      <workItem from="1713686778856" duration="13296000" />
     </task>
     <servers />
   </component>

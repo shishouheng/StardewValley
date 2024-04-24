@@ -66,6 +66,8 @@ namespace  ProjectIndieFarm
         /// 挑战完成事件
         /// </summary>
         public static EasyEvent<Challenge> OnChallengeFinished = new EasyEvent<Challenge>();
+
+        public static Player Player = null;
     }
 
     /// <summary>

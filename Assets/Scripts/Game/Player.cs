@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using QFramework;
@@ -10,6 +11,11 @@ namespace ProjectIndieFarm
     {
         public Grid grid;
         public Tilemap tileMap;
+
+        private void Awake()
+        {
+            Global.Player = this;
+        }
 
         private void Start()
         {
@@ -205,6 +211,11 @@ namespace ProjectIndieFarm
                 SceneManager.LoadScene("GamePass");
             }
 
+        }
+
+        private void OnDestroy()
+        {
+            Global.Player = null;
         }
     }
 }

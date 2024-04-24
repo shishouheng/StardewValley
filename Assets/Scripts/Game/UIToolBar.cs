@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using QFramework;
+using UnityEngine.UI;
 
 namespace ProjectIndieFarm
 {
@@ -8,39 +9,54 @@ namespace ProjectIndieFarm
 	{
 		private void Start()
 		{
-			Btn1.onClick.AddListener((() => ChangeTool(Constant.TOOL_HAND)));
-			Btn2.onClick.AddListener((() => ChangeTool(Constant.TOOL_SHOVEL)));
-			Btn3.onClick.AddListener((() => ChangeTool(Constant.TOOL_SEED)));
-			Btn4.onClick.AddListener((() => ChangeTool(Constant.TOOL_WATERING_SCAN)));
+			HideAllSelect();
+			Btn1select.Show();
+			Global.Player.ToolIcon.sprite = Btn1Icon.sprite;
+			Btn1.onClick.AddListener((() => ChangeTool(Constant.TOOL_HAND,Btn1select,Btn1Icon.sprite)));
+			Btn2.onClick.AddListener((() => ChangeTool(Constant.TOOL_SHOVEL,Btn2select,Btn2Icon.sprite)));
+			Btn3.onClick.AddListener((() => ChangeTool(Constant.TOOL_SEED,Btn3select,Btn3Icon.sprite)));
+			Btn4.onClick.AddListener((() => ChangeTool(Constant.TOOL_WATERING_SCAN,Btn4select,Btn4Icon.sprite)));
 		}
 
 		private void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				ChangeTool(Constant.TOOL_HAND);
+				ChangeTool(Constant.TOOL_HAND,Btn1select,Btn1Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				ChangeTool(Constant.TOOL_SHOVEL);
+				ChangeTool(Constant.TOOL_SHOVEL,Btn2select,Btn2Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				ChangeTool(Constant.TOOL_SEED);
+				ChangeTool(Constant.TOOL_SEED,Btn3select,Btn3Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				ChangeTool(Constant.TOOL_WATERING_SCAN);
+				ChangeTool(Constant.TOOL_WATERING_SCAN,Btn4select,Btn4Icon.sprite);
 			}
 		}
-		
-		void ChangeTool(string tool)
+
+		void HideAllSelect()
+		{
+			Btn1select.Hide();
+			Btn2select.Hide();
+			Btn3select.Hide();
+			Btn4select.Hide();
+		}
+		void ChangeTool(string tool,Image selectImage,Sprite icon)
 		{
 			Global.CurrentTool.Value = tool;
 			AudioController.Get.SFXTake.Play();
+	
+			HideAllSelect();
+
+			Global.Player.ToolIcon.sprite = icon;
+			selectImage.Show();
 		}
 	}
 }

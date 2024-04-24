@@ -18,54 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: Btn1
-      MemberName: Btn1
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn1/Btn1Icon
-      MemberName: Btn1Icon
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn1/Btn1select
-      MemberName: Btn1select
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: Btn2
-      MemberName: Btn2
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn2/Btn2Icon
-      MemberName: Btn2Icon
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn2/Btn2select
-      MemberName: Btn2select
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: Btn3
-      MemberName: Btn3
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn3/Btn3Icon
-      MemberName: Btn3Icon
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn3/Btn3select
-      MemberName: Btn3select
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: Btn4
-      MemberName: Btn4
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn4/Btn4Icon
-      MemberName: Btn4Icon
-    - TypeName: UnityEngine.UI.Image
-      PathToRoot: Btn4/Btn4select
-      MemberName: Btn4select
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: UIToolBar
+    ClassName: MouseController
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class UIToolBar : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class MouseController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:ec06a486-2bf6-4d4a-b8d4-482f45ff833c\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class UIToolBar\n\t{\n\n\t\tpublic UnityEngine.UI.Button
-      Btn1;\n\n\t\tpublic UnityEngine.UI.Image Btn1Icon;\n\n\t\tpublic UnityEngine.UI.Image
-      Btn1select;\n\n\t\tpublic UnityEngine.UI.Button Btn2;\n\n\t\tpublic UnityEngine.UI.Image
-      Btn2Icon;\n\n\t\tpublic UnityEngine.UI.Image Btn2select;\n\n\t\tpublic UnityEngine.UI.Button
-      Btn3;\n\n\t\tpublic UnityEngine.UI.Image Btn3Icon;\n\n\t\tpublic UnityEngine.UI.Image
-      Btn3select;\n\n\t\tpublic UnityEngine.UI.Button Btn4;\n\n\t\tpublic UnityEngine.UI.Image
-      Btn4Icon;\n\n\t\tpublic UnityEngine.UI.Image Btn4select;\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:85d89946-09e2-41f3-b99d-b244c26d5043\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class MouseController\n\t{\n\n\t}\n}\n"

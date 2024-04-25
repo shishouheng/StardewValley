@@ -23,20 +23,20 @@ namespace ProjectIndieFarm
             var playerCellPos = mGrid.WorldToCell(Global.Player.Position());
             var worldPos = mMainCamera.ScreenToWorldPoint(Input.mousePosition);
             var cellPos = mGrid.WorldToCell(worldPos);
+            Debug.Log(cellPos);
+
+            //通过向量的方式判断鼠标是否在玩家位置周围
+            Vector3Int offset = cellPos - playerCellPos;
+            int absX = Mathf.Abs(offset.x);
+            int absY = Mathf.Abs(offset.y);
+            // 排除(0, 0)的情况
+            bool isAdjacent = absX <= 1 && absY <= 1 && (absX + absY > 0); 
 
 
-            if (cellPos.x - playerCellPos.x == -1 || cellPos.y - playerCellPos.y == 1 ||
-                cellPos.x - playerCellPos.x == 0 || cellPos.y - playerCellPos.y == 1 ||
-                cellPos.x - playerCellPos.x == 1 || cellPos.y - playerCellPos.y == 1 ||
-                cellPos.x - playerCellPos.x == 1 || cellPos.y - playerCellPos.y == 0 ||
-                cellPos.x - playerCellPos.x == 1 || cellPos.y - playerCellPos.y == -1 ||
-                cellPos.x - playerCellPos.x == 0 || cellPos.y - playerCellPos.y == -1 ||
-                cellPos.x - playerCellPos.x == -1 || cellPos.y - playerCellPos.y == -1 ||
-                cellPos.x - playerCellPos.x == -1 || cellPos.y - playerCellPos.y == 0
-               )
+            if (isAdjacent)
             {
                 var gridOriginPos = mGrid.CellToWorld(cellPos);
-                gridOriginPos = gridOriginPos + mGrid.cellSize * 0.5f;
+                gridOriginPos.x += mGrid.cellSize.x * 0.5f;
                 transform.Position(gridOriginPos.x, gridOriginPos.y);
                 mSprite.enabled=true;
             }

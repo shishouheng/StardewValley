@@ -11,7 +11,7 @@ namespace ProjectIndieFarm
 		{
 			HideAllSelect();
 			Btn1select.Show();
-			Global.Player.ToolIcon.sprite = Btn1Icon.sprite;
+			Global.Tool.Icon.sprite = Btn1Icon.sprite;
 			Btn1.onClick.AddListener((() => ChangeTool(Constant.TOOL_HAND,Btn1select,Btn1Icon.sprite)));
 			Btn2.onClick.AddListener((() => ChangeTool(Constant.TOOL_SHOVEL,Btn2select,Btn2Icon.sprite)));
 			Btn3.onClick.AddListener((() => ChangeTool(Constant.TOOL_SEED,Btn3select,Btn3Icon.sprite)));
@@ -54,8 +54,7 @@ namespace ProjectIndieFarm
 			AudioController.Get.SFXTake.Play();
 	
 			HideAllSelect();
-
-			Global.Player.ToolIcon.sprite = icon;
+			Global.Tool.Icon.sprite = icon;
 			selectImage.Show();
 		}
 	}

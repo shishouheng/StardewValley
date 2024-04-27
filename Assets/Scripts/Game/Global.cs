@@ -68,6 +68,7 @@ namespace  ProjectIndieFarm
         public static EasyEvent<Challenge> OnChallengeFinished = new EasyEvent<Challenge>();
 
         public static Player Player = null;
+        public static ToolController Tool = null;
     }
 
     /// <summary>

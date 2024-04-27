@@ -1,12 +1,10 @@
-// Generate Id:3eb0fea9-aab6-4d88-b23c-5be66fa71050
+// Generate Id:cb92a11c-21ac-47ec-b0f3-a5a6ada193f6
 using UnityEngine;
 
 namespace ProjectIndieFarm
 {
 	public partial class Player
 	{
-
-		public SpriteRenderer ToolIcon;
 
 	}
 }

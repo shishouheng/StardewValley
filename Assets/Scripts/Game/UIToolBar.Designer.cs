@@ -1,4 +1,4 @@
-// Generate Id:ec06a486-2bf6-4d4a-b8d4-482f45ff833c
+// Generate Id:566f8f9c-de32-4344-9b90-081fa0bcd788
 using UnityEngine;
 
 namespace ProjectIndieFarm
@@ -29,6 +29,12 @@ namespace ProjectIndieFarm
 		public UnityEngine.UI.Image Btn4Icon;
 
 		public UnityEngine.UI.Image Btn4select;
+
+		public UnityEngine.UI.Button Btn5;
+
+		public UnityEngine.UI.Image Btn5Icon;
+
+		public UnityEngine.UI.Image Btn5select;
 
 	}
 }

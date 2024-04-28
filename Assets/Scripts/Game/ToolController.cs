@@ -60,6 +60,8 @@ namespace ProjectIndieFarm
                             AudioController.Get.SFXShoveDig.Play();
                         }
                     }
+                    
+                    //放种子
                     else if (mShowGrid[cellPos.x, cellPos.y] != null && mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
                              Global.CurrentTool.Value == Constant.TOOL_SEED)
                     {
@@ -78,6 +80,27 @@ namespace ProjectIndieFarm
                             AudioController.Get.SFXPutSeed.Play();
                         }
                     }
+                    
+                    else if (mShowGrid[cellPos.x, cellPos.y] != null && mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
+                             Global.CurrentTool.Value == Constant.TOOL_SEED_RADISH)
+                    {
+                        var gridCenterPos=ShowSelect(cellPos);
+
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            //放胡萝卜种子
+                            //这里的y值如果不减去0.5f会出现在格子之外
+                            var plantGameObject = ResController.Instance.plantRadishPrefab.Instantiate().Position(gridCenterPos.x,gridCenterPos.y-0.5f);
+                            var plant = plantGameObject.GetComponent<PlantRadish>();
+                            plant.xCell = cellPos.x;
+                            plant.yCell = cellPos.y;
+                            PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
+                            mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
+                            AudioController.Get.SFXPutSeed.Play();
+                        }
+                    }
+                    
+                    //浇水
                     else if (mShowGrid[cellPos.x, cellPos.y] != null &&
                              mShowGrid[cellPos.x, cellPos.y].Watered != true &&
                              Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
@@ -92,6 +115,7 @@ namespace ProjectIndieFarm
                         }
                     }
                     
+                    //收割
                     else if (mShowGrid[cellPos.x, cellPos.y] != null &&
                              mShowGrid[cellPos.x, cellPos.y].HasPlant &&
                              mShowGrid[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
@@ -102,8 +126,8 @@ namespace ProjectIndieFarm
                         if (Input.GetMouseButtonDown(0))
                         {
                             //触发收割果实事件，然后会在GameController中持续检测该事件是否完成，完成了则结束改事件
-                            Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);
-                            Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].gameObject);
+                            //Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);
+                            Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].GameObject);
                             mShowGrid[cellPos.x, cellPos.y].HasPlant = false;
                             Global.HarverstCountInCurrentDay.Value++;
                             Global.FruitCount.Value++;

@@ -28,24 +28,9 @@ namespace ProjectIndieFarm
 
                 PlantController.Instance.plants.ForEach((x, y, plant) =>
                 {
-                    if (plant)
+                    if (plant != null)
                     {
-                        if (plant.state == PlantStates.Seed)
-                        {
-                            if (soilDatas[x, y].Watered)
-                            {
-                                //切换到smallPlant状态
-                                plant.SetState(PlantStates.Small);
-                            }
-                        }
-                        else if (plant.state == PlantStates.Small)
-                        {
-                            if (soilDatas[x, y].Watered)
-                            {
-                                //切换到成熟状态
-                                plant.SetState(PlantStates.Ripe);
-                            }
-                        }
+                        plant.Grow(soilDatas[x, y]);
                     }
                 });
 

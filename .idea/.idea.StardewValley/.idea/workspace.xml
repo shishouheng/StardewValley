@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/PlantRadish.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Prefab/PlantRadish.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/SeedRadish.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/SeedRadish.aseprite.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.Designer1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.Designer1.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MouseController.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MouseController.Designer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.Designer.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MouseController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/MouseController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlantController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.Designer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/TileSelectController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +160,8 @@
       <workItem from="1712495639741" duration="1935000" />
       <workItem from="1712583030505" duration="14784000" />
       <workItem from="1712841006632" duration="27809000" />
-      <workItem from="1713686778856" duration="26116000" />
+      <workItem from="1713686778856" duration="28259000" />
+      <workItem from="1714308277881" duration="2468000" />
     </task>
     <servers />
   </component>

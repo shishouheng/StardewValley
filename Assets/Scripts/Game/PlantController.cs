@@ -10,7 +10,7 @@ namespace ProjectIndieFarm
 	public partial class PlantController : ViewController,ISingleton
 	{
 		public static PlantController Instance => MonoSingletonProperty<PlantController>.Instance;
-		public EasyGrid<Plant> plants = new EasyGrid<Plant>(10,10);
+		public EasyGrid<IPlant> plants = new EasyGrid<IPlant>(10,10);
 		void Start()
 		{
 			// Code Here

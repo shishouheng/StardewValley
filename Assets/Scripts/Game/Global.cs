@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
@@ -81,6 +82,11 @@ namespace  ProjectIndieFarm
         public const string TOOL_SEED = "seed";
         public const string TOOL_WATERING_SCAN = "watering_scan";
 
+        /// <summary>
+        /// 萝卜
+        /// </summary>
+        public const string TOOL_SEED_RADISH = "seed_radish";
+
         public static string DisplayName(string tool)
         {
             switch (tool)
@@ -93,6 +99,8 @@ namespace  ProjectIndieFarm
                     return "种子";
                 case TOOL_WATERING_SCAN:
                     return "花洒";
+                case TOOL_SEED_RADISH:
+                    return "萝卜";
             }
 
             return string.Empty;

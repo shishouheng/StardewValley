@@ -9,12 +9,9 @@ namespace ProjectIndieFarm
 		public int yCell;
 		private PlantStates mState = PlantStates.Seed;
 		public PlantStates State =>mState;
+		public int RipeDay { get; private set; }
 		public GameObject GameObject => gameObject;
 
-		/// <summary>
-		/// 成熟的日期（第几天）
-		/// </summary>
-		public int ripeDay = -1;
 
 		public void SetState(PlantStates newState)
 		{
@@ -23,17 +20,17 @@ namespace ProjectIndieFarm
 			{
 				if (mState == PlantStates.Small && newState == PlantStates.Ripe)
 				{
-					ripeDay = Global.Days.Value;
+					RipeDay = Global.Days.Value;
 				}
 				mState = newState;
 				//切换表现
 				switch (newState)
 				{
 					case PlantStates.Small:
-						currentSprite = ResController.Instance.smallPlantSprite;
+						currentSprite = ResController.Instance.smallPlantRadishSprite;
 						break;
 					case PlantStates.Ripe:
-						currentSprite = ResController.Instance.ripeSprite;
+						currentSprite = ResController.Instance.ripeRadishSprite;
 						break;
 					case PlantStates.Seed:
 						currentSprite = ResController.Instance.seedRadishSprite;

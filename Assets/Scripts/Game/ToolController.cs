@@ -126,7 +126,16 @@ namespace ProjectIndieFarm
                         if (Input.GetMouseButtonDown(0))
                         {
                             //触发收割果实事件，然后会在GameController中持续检测该事件是否完成，完成了则结束改事件
-                            //Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);
+                            Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);
+
+                            if (PlantController.Instance.plants[cellPos.x, cellPos.y] as Plant)
+                            {
+                                Global.FruitCount.Value++;
+                            }
+                            else if(PlantController.Instance.plants[cellPos.x, cellPos.y] as PlantRadish)
+                            {
+                                Global.RadishCount.Value++;
+                            }
                             Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].GameObject);
                             mShowGrid[cellPos.x, cellPos.y].HasPlant = false;
                             Global.HarverstCountInCurrentDay.Value++;

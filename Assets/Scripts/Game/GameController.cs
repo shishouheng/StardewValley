@@ -15,7 +15,7 @@ namespace ProjectIndieFarm
             //监听成熟的植物是否时当天成熟并且当天收割的
             Global.OnPlantHarvest.Register(plant =>
             {
-                if (plant.ripeDay == Global.Days.Value)
+                if (plant.RipeDay == Global.Days.Value)
                 {
                     Global.RipeCountAndHarverstInCurrentDay.Value++;
                 }

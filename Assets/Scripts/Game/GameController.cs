@@ -15,9 +15,22 @@ namespace ProjectIndieFarm
             //监听成熟的植物是否时当天成熟并且当天收割的
             Global.OnPlantHarvest.Register(plant =>
             {
-                if (plant.RipeDay == Global.Days.Value)
+                if (plant is Plant)
                 {
-                    Global.RipeCountAndHarverstInCurrentDay.Value++;
+                    Global.HarverstCountInCurrentDay.Value++;
+                    if (plant.RipeDay == Global.Days.Value)
+                    {
+                        Global.RipeCountAndHarverstInCurrentDay.Value++;
+                    }
+                }
+                else if (plant is PlantRadish)
+                {
+                    Global.RipeAndHarvestRadishCountInCurrentDay.Value++;
+                    if (plant.RipeDay == Global.Days.Value)
+                    {
+                        Global.RipeAndHarvestRadishCountInCurrentDay.Value++;
+                        Debug.Log(Global.RadishHarvestCountInCurrentDay.Value);
+                    }
                 }
             }).UnRegisterWhenGameObjectDestroyed(this);
 

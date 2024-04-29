@@ -138,7 +138,6 @@ namespace ProjectIndieFarm
                             }
                             Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].GameObject);
                             mShowGrid[cellPos.x, cellPos.y].HasPlant = false;
-                            Global.HarverstCountInCurrentDay.Value++;
                             Global.FruitCount.Value++;
                             AudioController.Get.SFXHarvest.Play();
                         }

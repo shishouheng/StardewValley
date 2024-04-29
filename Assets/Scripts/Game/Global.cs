@@ -36,6 +36,16 @@ namespace  ProjectIndieFarm
         /// 当天收割的数量
         /// </summary>
         public static BindableProperty<int> HarverstCountInCurrentDay = new BindableProperty<int>(0);
+
+        /// <summary>
+        /// 当天成熟并收割的胡萝卜数量
+        /// </summary>
+        public static BindableProperty<int> RipeAndHarvestRadishCountInCurrentDay = new BindableProperty<int>(0);
+
+        /// <summary>
+        /// 当天收割萝卜的数量
+        /// </summary>
+        public static BindableProperty<int> RadishHarvestCountInCurrentDay = new BindableProperty<int>(0);
         
         /// <summary>
         /// 所有挑战的列表
@@ -44,7 +54,9 @@ namespace  ProjectIndieFarm
         {
             new ChallengeHarvestOneFruit(),
             new ChallengeRipeAndHarverstTwoFruitsInOneDay(),
-            new ChallengeRipeAndHarverstFiveFruitsInOneDay()
+            new ChallengeRipeAndHarverstFiveFruitsInOneDay(),
+            new ChallengeHarvestARadish(),
+            new ChallengeRipeAndHarvestFruitAndRadishInADay()
         };
 
         /// <summary>

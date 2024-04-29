@@ -27,7 +27,9 @@ namespace ProjectIndieFarm
             {
                 //天数变跟时重置当天的成熟果实数量为0
                 Global.RipeCountAndHarverstInCurrentDay.Value = 0;
+                Global.RipeAndHarvestRadishCountInCurrentDay.Value = 0;
                 Global.HarverstCountInCurrentDay.Value = 0;
+                Global.RipeAndHarvestRadishCountInCurrentDay.Value = 0;
                 var soilDatas = FindObjectOfType<GridController>().ShowGrid;
 
                 PlantController.Instance.plants.ForEach((x, y, plant) =>

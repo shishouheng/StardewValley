@@ -1,9 +1,8 @@
 namespace ProjectIndieFarm
 {
-    public class ChallengeHarvestOneFruit: Challenge
+    public class ChallengeHarvestARadish: Challenge
     {
-        public override string Name { get; } = "收获一个果实";
-
+        public override string Name { get; } = "收获一个萝卜";
         public override void OnStart()
         {
             
@@ -11,7 +10,7 @@ namespace ProjectIndieFarm
 
         public override bool CheckFinish()
         {
-            return Global.Days.Value != startDate &&Global.HarverstCountInCurrentDay.Value > 0;
+            return Global.Days.Value != startDate && Global.RipeAndHarvestRadishCountInCurrentDay.Value > 0;
         }
 
         public override void OnFinish()

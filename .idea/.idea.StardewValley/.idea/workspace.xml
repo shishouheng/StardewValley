@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/RipeRadish.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/RipeRadish.aseprite.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/SmallPlantRadish.aseprite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/Sprite/SmallPlantRadish.aseprite.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Font.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Font/fusion-pixel.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/Font/fusion-pixel.ttf.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Global.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/PlantRadish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ChallengeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ChallengeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ResController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/素材/素材/037.fusion-pixel.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/素材/素材/037.fusion-pixel.ttf.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,17 +25,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/cc0ec58d048641a1990f7b5fd4d13318174200/a6/b634787c/020002E9.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4062115a1c5748d889ffa9b1e24a7db64000/57/13a25d34/GridLayout.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/96/a4a17425/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/84605dd65d9d42edbf5a8009bef6721da000/f5/5886bf80/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc0ec58d048641a1990f7b5fd4d13318174200/4d/2848c15b/Vector3Int.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/cc0ec58d048641a1990f7b5fd4d13318174200/b2/c1632416/Sprite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/AudioController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ChallengeController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GamePassController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameStartController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/MouseController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/PlantController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UIToolBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,30 +52,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;独立播放器.Start Unity.executor&quot;: &quot;Debug&quot;,
-    &quot;附加到 Unity 编辑器.附加到 Unity 编辑器.executor&quot;: &quot;Debug&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.IL (Intermediate Language)",
+    "vue.rearranger.settings.migration": "true",
+    "独立播放器.Start Unity.executor": "Debug",
+    "附加到 Unity 编辑器.附加到 Unity 编辑器.executor": "Debug"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache&quot;,
-      &quot;/Users/zhushouheng/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/DecompilerCache",
+      "/Users/zhushouheng/Library/Application Support/JetBrains/Rider2023.3/resharper-host/SourcesCache",
+      "/Users/zhushouheng/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="启动 Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.17f1c1/Unity.app/Contents/MacOS/Unity" />
@@ -157,7 +156,7 @@
       <workItem from="1712583030505" duration="14784000" />
       <workItem from="1712841006632" duration="27809000" />
       <workItem from="1713686778856" duration="28259000" />
-      <workItem from="1714308277881" duration="4140000" />
+      <workItem from="1714308277881" duration="6496000" />
     </task>
     <servers />
   </component>

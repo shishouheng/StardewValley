@@ -11,6 +11,8 @@ namespace ProjectIndieFarm
     {
         public Grid grid;
         public Tilemap tileMap;
+        public Font font;
+        private GUIStyle mLabelStyle;
 
         private void Awake()
         {
@@ -19,6 +21,8 @@ namespace ProjectIndieFarm
 
         private void Start()
         {
+            mLabelStyle = new GUIStyle("Label"){font = this.font};
+            
             Global.Days.Register(day =>
             {
                 //天数变跟时重置当天的成熟果实数量为0
@@ -55,22 +59,22 @@ namespace ProjectIndieFarm
             GUILayout.Space(10);
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label("天数" + Global.Days.Value);
+            GUILayout.Label("天数" + Global.Days.Value,mLabelStyle);
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label("果实" + Global.FruitCount.Value);
+            GUILayout.Label("果实" + Global.FruitCount.Value,mLabelStyle);
             GUILayout.EndHorizontal();
             
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label("胡萝卜" + Global.RadishCount.Value);
+            GUILayout.Label("胡萝卜" + Global.RadishCount.Value,mLabelStyle);
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
-            GUILayout.Label($"当前工具：{Global.CurrentTool.Value}");
+            GUILayout.Label($"当前工具：{Global.CurrentTool.Value}",mLabelStyle);
             GUILayout.EndHorizontal();
         }
 

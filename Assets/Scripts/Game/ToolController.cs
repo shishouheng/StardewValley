@@ -53,7 +53,7 @@ namespace ProjectIndieFarm
                     {
                         ShowSelect(cellPos);
 
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             mTileMap.SetTile(cellPos, mGridController.pen);
                             mShowGrid[cellPos.x, cellPos.y] = new SoilData();
@@ -67,7 +67,7 @@ namespace ProjectIndieFarm
                     {
                         var gridCenterPos=ShowSelect(cellPos);
 
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             //放种子
                             //这里的y值如果不减去0.5f会出现在格子之外
@@ -86,7 +86,7 @@ namespace ProjectIndieFarm
                     {
                         var gridCenterPos=ShowSelect(cellPos);
 
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             //放胡萝卜种子
                             //这里的y值如果不减去0.5f会出现在格子之外
@@ -106,7 +106,7 @@ namespace ProjectIndieFarm
                              Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
                     {
                         var gridCenterPos=ShowSelect(cellPos);
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             //浇水
                             ResController.Instance.waterPrefab.Instantiate().Position(gridCenterPos.x,gridCenterPos.y-0.5f);
@@ -123,7 +123,7 @@ namespace ProjectIndieFarm
                     {
                         ShowSelect(cellPos);
 
-                        if (Input.GetMouseButtonDown(0))
+                        if (Input.GetMouseButton(0))
                         {
                             //触发收割果实事件，然后会在GameController中持续检测该事件是否完成，完成了则结束改事件
                             Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);

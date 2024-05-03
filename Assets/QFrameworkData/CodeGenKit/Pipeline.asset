@@ -18,19 +18,12 @@ MonoBehaviour:
     GameObject: {fileID: 0}
     From: 0
     NameToFullName: []
-    BindInfos:
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: BtnBuyFruitSeed
-      MemberName: BtnBuyFruitSeed
-    - TypeName: UnityEngine.UI.Button
-      PathToRoot: BtnBuyRadishSeed
-      MemberName: BtnBuyRadishSeed
+    BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: UIShop
+    ClassName: TiemController
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class UIShop : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class TiemController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:5c24ceac-3997-4e67-b63b-2a5f7bcb7877\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class UIShop\n\t{\n\n\t\tpublic UnityEngine.UI.Button
-      BtnBuyFruitSeed;\n\n\t\tpublic UnityEngine.UI.Button BtnBuyRadishSeed;\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:c6f48ceb-af0b-4239-bddd-f921725830c5\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class TiemController\n\t{\n\n\t}\n}\n"

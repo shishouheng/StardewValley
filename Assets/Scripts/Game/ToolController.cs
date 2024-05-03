@@ -60,61 +60,74 @@ namespace ProjectIndieFarm
                             AudioController.Get.SFXShoveDig.Play();
                         }
                     }
-                    
+
                     //放种子
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null && mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
+                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
+                             mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
                              Global.CurrentTool.Value == Constant.TOOL_SEED)
                     {
-                        var gridCenterPos=ShowSelect(cellPos);
-
-                        if (Input.GetMouseButton(0))
+                        if (Global.FruitSeedCount.Value > 0)
                         {
-                            //放种子
-                            //这里的y值如果不减去0.5f会出现在格子之外
-                            var plantGameObject = ResController.Instance.plantPrefab.Instantiate().Position(gridCenterPos.x,gridCenterPos.y-0.5f);
-                            var plant = plantGameObject.GetComponent<Plant>();
-                            plant.xCell = cellPos.x;
-                            plant.yCell = cellPos.y;
-                            PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
-                            mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
-                            AudioController.Get.SFXPutSeed.Play();
+                            var gridCenterPos = ShowSelect(cellPos);
+
+                            if (Input.GetMouseButton(0))
+                            {
+                                Global.FruitSeedCount.Value--;
+                                //放种子
+                                //这里的y值如果不减去0.5f会出现在格子之外
+                                var plantGameObject = ResController.Instance.plantPrefab.Instantiate()
+                                    .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
+                                var plant = plantGameObject.GetComponent<Plant>();
+                                plant.xCell = cellPos.x;
+                                plant.yCell = cellPos.y;
+                                PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
+                                mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
+                                AudioController.Get.SFXPutSeed.Play();
+                            }
                         }
                     }
-                    
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null && mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
+
+                    //种胡萝卜
+                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
+                             mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
                              Global.CurrentTool.Value == Constant.TOOL_SEED_RADISH)
                     {
-                        var gridCenterPos=ShowSelect(cellPos);
-
-                        if (Input.GetMouseButton(0))
+                        if (Global.RadishSeedCount.Value > 0)
                         {
-                            //放胡萝卜种子
-                            //这里的y值如果不减去0.5f会出现在格子之外
-                            var plantGameObject = ResController.Instance.plantRadishPrefab.Instantiate().Position(gridCenterPos.x,gridCenterPos.y-0.5f);
-                            var plant = plantGameObject.GetComponent<PlantRadish>();
-                            plant.xCell = cellPos.x;
-                            plant.yCell = cellPos.y;
-                            PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
-                            mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
-                            AudioController.Get.SFXPutSeed.Play();
+                            var gridCenterPos = ShowSelect(cellPos);
+
+                            if (Input.GetMouseButton(0))
+                            {
+                                Global.RadishSeedCount.Value--;
+                                //放胡萝卜种子
+                                //这里的y值如果不减去0.5f会出现在格子之外
+                                var plantGameObject = ResController.Instance.plantRadishPrefab.Instantiate()
+                                    .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
+                                var plant = plantGameObject.GetComponent<PlantRadish>();
+                                plant.xCell = cellPos.x;
+                                plant.yCell = cellPos.y;
+                                PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
+                                mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
+                                AudioController.Get.SFXPutSeed.Play();
+                            }
                         }
                     }
-                    
                     //浇水
                     else if (mShowGrid[cellPos.x, cellPos.y] != null &&
                              mShowGrid[cellPos.x, cellPos.y].Watered != true &&
                              Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
                     {
-                        var gridCenterPos=ShowSelect(cellPos);
+                        var gridCenterPos = ShowSelect(cellPos);
                         if (Input.GetMouseButton(0))
                         {
                             //浇水
-                            ResController.Instance.waterPrefab.Instantiate().Position(gridCenterPos.x,gridCenterPos.y-0.5f);
+                            ResController.Instance.waterPrefab.Instantiate()
+                                .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
                             mShowGrid[cellPos.x, cellPos.y].Watered = true;
                             AudioController.Get.SFXWater.Play();
                         }
                     }
-                    
+
                     //收割
                     else if (mShowGrid[cellPos.x, cellPos.y] != null &&
                              mShowGrid[cellPos.x, cellPos.y].HasPlant &&
@@ -132,13 +145,13 @@ namespace ProjectIndieFarm
                             {
                                 Global.FruitCount.Value++;
                             }
-                            else if(PlantController.Instance.plants[cellPos.x, cellPos.y] as PlantRadish)
+                            else if (PlantController.Instance.plants[cellPos.x, cellPos.y] as PlantRadish)
                             {
                                 Global.RadishCount.Value++;
                             }
+
                             Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].GameObject);
                             mShowGrid[cellPos.x, cellPos.y].HasPlant = false;
-                            Global.FruitCount.Value++;
                             AudioController.Get.SFXHarvest.Play();
                         }
                     }
@@ -158,8 +171,8 @@ namespace ProjectIndieFarm
         Vector3 ShowSelect(Vector3Int cellPos)
         {
             var gridOriginPos = mGrid.CellToWorld(cellPos);
-            var gridCenterPos=gridOriginPos + mGrid.cellSize * 0.5f;
-            transform.Position(gridCenterPos.x, gridCenterPos.y-0.5f);
+            var gridCenterPos = gridOriginPos + mGrid.cellSize * 0.5f;
+            transform.Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
             mSprite.enabled = true;
             return gridCenterPos;
         }

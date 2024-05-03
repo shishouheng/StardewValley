@@ -18,9 +18,19 @@ namespace ProjectIndieFarm
         public static BindableProperty<int> FruitCount = new BindableProperty<int>(0);
 
         /// <summary>
+        /// 果实种子数量
+        /// </summary>
+        public static BindableProperty<int> FruitSeedCount = new BindableProperty<int>(5);
+
+        /// <summary>
         /// 胡萝卜数量
         /// </summary>
-        public static BindableProperty<int> RadishCount = new BindableProperty<int>();
+        public static BindableProperty<int> RadishCount = new BindableProperty<int>(0);
+        
+        /// <summary>
+        /// 胡萝卜种子数量
+        /// </summary>
+        public static BindableProperty<int> RadishSeedCount=new BindableProperty<int>(5);
 
         /// <summary>
         /// 当前工具

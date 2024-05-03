@@ -71,7 +71,17 @@ namespace ProjectIndieFarm
             
             GUILayout.BeginHorizontal();
             GUILayout.Space(10);
+            GUILayout.Label("果实种子" + Global.FruitSeedCount.Value,mLabelStyle);
+            GUILayout.EndHorizontal();
+            
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
             GUILayout.Label("胡萝卜" + Global.RadishCount.Value,mLabelStyle);
+            GUILayout.EndHorizontal();
+            
+            GUILayout.BeginHorizontal();
+            GUILayout.Space(10);
+            GUILayout.Label("胡萝卜种子" + Global.RadishSeedCount.Value,mLabelStyle);
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();

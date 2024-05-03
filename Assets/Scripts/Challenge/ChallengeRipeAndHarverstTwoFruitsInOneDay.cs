@@ -14,7 +14,7 @@ namespace ProjectIndieFarm
 
         public override bool CheckFinish()
         {
-            return Global.Days.Value != startDate && Global.RipeCountAndHarverstInCurrentDay.Value >= 2;
+            return Global.Days.Value != startDate && ChallengeController.RipeCountAndHarverstInCurrentDay.Value >= 2;
         }
 
         public override void OnFinish()

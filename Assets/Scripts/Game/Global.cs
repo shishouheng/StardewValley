@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using QFramework;
 using UnityEngine;
 
-namespace  ProjectIndieFarm
+namespace ProjectIndieFarm
 {
     public class Global : MonoBehaviour
     {
@@ -21,69 +21,17 @@ namespace  ProjectIndieFarm
         /// 胡萝卜数量
         /// </summary>
         public static BindableProperty<int> RadishCount = new BindableProperty<int>();
-        
+
         /// <summary>
         /// 当前工具
         /// </summary>
         public static BindableProperty<string> CurrentTool = new BindableProperty<string>(Constant.TOOL_HAND);
 
-        /// <summary>
-        /// 当天成熟并且收走的果实数量
-        /// </summary>
-        public static BindableProperty<int> RipeCountAndHarverstInCurrentDay= new BindableProperty<int>(0);
-
-        /// <summary>
-        /// 当天收割的数量
-        /// </summary>
-        public static BindableProperty<int> HarverstCountInCurrentDay = new BindableProperty<int>(0);
-
-        /// <summary>
-        /// 当天成熟并收割的胡萝卜数量
-        /// </summary>
-        public static BindableProperty<int> RipeAndHarvestRadishCountInCurrentDay = new BindableProperty<int>(0);
-
-        /// <summary>
-        /// 当天收割萝卜的数量
-        /// </summary>
-        public static BindableProperty<int> RadishHarvestCountInCurrentDay = new BindableProperty<int>(0);
-        
-        /// <summary>
-        /// 所有挑战的列表
-        /// </summary>
-        public static List<Challenge> Challenges = new List<Challenge>()
-        {
-            new ChallengeHarvestOneFruit(),
-            new ChallengeRipeAndHarverstTwoFruitsInOneDay(),
-            new ChallengeRipeAndHarverstFiveFruitsInOneDay(),
-            new ChallengeHarvestARadish(),
-            new ChallengeRipeAndHarvestFruitAndRadishInADay()
-        };
-
-        /// <summary>
-        /// 激活的挑战列表
-        /// </summary>
-        public static List<Challenge> ActiveChallenges = new List<Challenge>()
-        {
-
-        };
-
-        /// <summary>
-        /// 已经完成的挑战列表
-        /// </summary>
-        public static List<Challenge> FinishedChallenges = new List<Challenge>()
-        {
-
-        };
 
         /// <summary>
         /// 植物收割事件
         /// </summary>
         public static EasyEvent<IPlant> OnPlantHarvest = new EasyEvent<IPlant>();
-
-        /// <summary>
-        /// 挑战完成事件
-        /// </summary>
-        public static EasyEvent<Challenge> OnChallengeFinished = new EasyEvent<Challenge>();
 
         public static Player Player = null;
         public static ToolController Tool = null;
@@ -124,5 +72,3 @@ namespace  ProjectIndieFarm
         }
     }
 }
-
-    

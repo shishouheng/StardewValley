@@ -53,24 +53,28 @@ namespace ProjectIndieFarm
 			{
 				Global.FruitCount.Value -= 1;
 				Global.FruitSeedCount.Value += 2;
+				AudioController.Get.SFXBuy.Play();
 			}));
 			
 			BtnBuyRadishSeed.onClick.AddListener((() =>
 			{
 				Global.RadishCount.Value -= 1;
 				Global.RadishSeedCount.Value += 2;
+				AudioController.Get.SFXBuy.Play();
 			}));
 			
 			BtnBuyFruit.onClick.AddListener(() =>
 			{
 				Global.RadishCount.Value -= 2;
 				Global.FruitCount.Value += 1;
+				AudioController.Get.SFXBuy.Play();
 			});
 			
 			BtnBuyRadish.onClick.AddListener((() =>
 			{
 				Global.FruitCount.Value -= 2;
 				Global.RadishCount.Value += 1;
+				AudioController.Get.SFXBuy.Play();
 			}));
 		}
 	}

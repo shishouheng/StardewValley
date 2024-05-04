@@ -1,4 +1,4 @@
-// Generate Id:5805b66e-c707-44b3-9c6c-db54161f9f8c
+// Generate Id:855f3937-61b8-4efe-8996-8f198b5f4a29
 using UnityEngine;
 
 namespace ProjectIndieFarm
@@ -19,6 +19,8 @@ namespace ProjectIndieFarm
 		public UnityEngine.AudioSource SFXChallengeFinish;
 
 		public UnityEngine.AudioSource SFXNextDay;
+
+		public UnityEngine.AudioSource SFXBuy;
 
 	}
 }

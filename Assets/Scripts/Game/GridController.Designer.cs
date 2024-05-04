@@ -1,4 +1,4 @@
-// Generate Id:f32cfd64-5451-4175-ac99-3cdd436d294a
+// Generate Id:b557b17a-565a-445a-9b75-4d70294c28ed
 using UnityEngine;
 
 namespace ProjectIndieFarm
@@ -6,7 +6,9 @@ namespace ProjectIndieFarm
 	public partial class GridController
 	{
 
-		public UnityEngine.Tilemaps.Tilemap tilemap;
+		public UnityEngine.Tilemaps.Tilemap Soil;
+
+		public UnityEngine.Tilemaps.Tilemap Ground;
 
 	}
 }

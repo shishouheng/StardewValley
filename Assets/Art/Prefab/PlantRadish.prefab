@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8156387252944746647, guid: 33ab30c9671c64d44a0a83cb398b9353, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105,4 +105,3 @@ MonoBehaviour:
   ArchitectureFullTypeName: 
   xCell: 0
   yCell: 0
-  ripeDay: -1

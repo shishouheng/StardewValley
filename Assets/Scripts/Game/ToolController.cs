@@ -21,7 +21,7 @@ namespace ProjectIndieFarm
         private void Start()
         {
             mGridController = FindObjectOfType<GridController>();
-            mTileMap = mGridController.tilemap;
+            mTileMap = mGridController.Soil;
             mShowGrid = mGridController.ShowGrid;
             mGrid = mGridController.GetComponent<Grid>();
             mMainCamera = Camera.main;

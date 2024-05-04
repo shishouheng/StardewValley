@@ -43,7 +43,7 @@ namespace ProjectIndieFarm
             int absX = Mathf.Abs(offset.x);
             int absY = Mathf.Abs(offset.y);
             // 排除(0, 0)的情况
-            bool isAdjacent = absX <= 1 && absY <= 1 && (absX + absY > 0);
+            bool isAdjacent = absX <= 1 && absY <= 1 /*&& (absX + absY > 0)*/;
             if (isAdjacent)
             {
                 if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)

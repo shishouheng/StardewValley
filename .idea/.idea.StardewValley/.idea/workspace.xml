@@ -5,17 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="107989da-9d4e-4ad3-97f5-1a24305d8606" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeFruitCountGreaterOrEqual10.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeFruitCountGreaterOrEqual10.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeHarvest10thFruit.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeHarvest10thFruit.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeHarvest10thRadish.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeHarvest10thRadish.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeRadishCountGreaterOrEqual10.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Challenge/ChallengeRadishCountGreaterOrEqual10.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Home.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Home.Designer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Home.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Home.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.StardewValley/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ChallengeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ChallengeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/QFrameworkData/CodeGenKit/Pipeline.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ToolController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UIShop.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIShop.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UIShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UIShop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GamePassController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameStartController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GridController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Home.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Plant.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/PlantController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/TiemController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -161,7 +161,7 @@
       <workItem from="1713686778856" duration="28259000" />
       <workItem from="1714308277881" duration="9577000" />
       <workItem from="1714724493885" duration="4597000" />
-      <workItem from="1714802966558" duration="1512000" />
+      <workItem from="1714802966558" duration="3559000" />
     </task>
     <servers />
   </component>

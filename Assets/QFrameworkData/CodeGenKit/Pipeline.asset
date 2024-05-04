@@ -20,10 +20,10 @@ MonoBehaviour:
     NameToFullName: []
     BindInfos: []
     ScriptsFolder: Assets/Scripts/Game
-    ClassName: TiemController
+    ClassName: Home
     Namespace: ProjectIndieFarm
     MainCode: "using UnityEngine;\nusing QFramework;\n\nnamespace ProjectIndieFarm\n{\n\tpublic
-      partial class TiemController : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
+      partial class Home : ViewController\n\t{\n\t\tvoid Start()\n\t\t{\n\t\t\t//
       Code Here\n\t\t}\n\t}\n}\n"
-    DesignerCode: "// Generate Id:c6f48ceb-af0b-4239-bddd-f921725830c5\nusing UnityEngine;\n\nnamespace
-      ProjectIndieFarm\n{\n\tpublic partial class TiemController\n\t{\n\n\t}\n}\n"
+    DesignerCode: "// Generate Id:c40c206c-290f-4452-9ed5-f3ae81257c99\nusing UnityEngine;\n\nnamespace
+      ProjectIndieFarm\n{\n\tpublic partial class Home\n\t{\n\n\t}\n}\n"

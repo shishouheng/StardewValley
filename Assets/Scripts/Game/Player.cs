@@ -92,12 +92,6 @@ namespace ProjectIndieFarm
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Global.Days.Value++;
-                AudioController.Get.SFXNextDay.Play();
-            }
-
             var cellPos = grid.WorldToCell(transform.position);
             var gridData = FindObjectOfType<GridController>().ShowGrid;
             var tileWorldPos = grid.CellToWorld(cellPos);

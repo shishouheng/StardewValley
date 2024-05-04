@@ -31,6 +31,16 @@ namespace ProjectIndieFarm
         public static BindableProperty<int> RadishHarvestCountInCurrentDay = new BindableProperty<int>(0);
 
         /// <summary>
+        /// 收获过的果实数量
+        /// </summary>
+        public static int HarvestedFruitCount = 0;
+
+        /// <summary>
+        /// 收获过的萝卜数量
+        /// </summary>
+        public static int HarvestedRadishCount = 0;
+        
+        /// <summary>
         /// 所有挑战的列表
         /// </summary>
         public static List<Challenge> Challenges = new List<Challenge>()
@@ -39,7 +49,11 @@ namespace ProjectIndieFarm
             new ChallengeRipeAndHarverstTwoFruitsInOneDay(),
             new ChallengeRipeAndHarverstFiveFruitsInOneDay(),
             new ChallengeHarvestARadish(),
-            new ChallengeRipeAndHarvestFruitAndRadishInADay()
+            new ChallengeRipeAndHarvestFruitAndRadishInADay(),
+            new ChallengeHarvest10thFruit(),
+            new ChallengeHarvest10thRadish(),
+            new ChallengeFruitCountGreaterOrEqual10(),
+            new ChallengeRadishCountGreaterOrEqual10()
         };
 
         /// <summary>
@@ -73,6 +87,7 @@ namespace ProjectIndieFarm
             {
                 if (plant is Plant)
                 {
+                    HarvestedFruitCount++;
                     ChallengeController.HarverstCountInCurrentDay.Value++;
                     if (plant.RipeDay == Global.Days.Value)
                     {
@@ -81,6 +96,7 @@ namespace ProjectIndieFarm
                 }
                 else if (plant is PlantRadish)
                 {
+                    HarvestedRadishCount++;
                     ChallengeController.RipeAndHarvestRadishCountInCurrentDay.Value++;
                     if (plant.RipeDay == Global.Days.Value)
                     {

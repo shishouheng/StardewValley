@@ -29,6 +29,14 @@ namespace ProjectIndieFarm
             mSprite.enabled = false;
         }
 
+
+        private ITool mShovel = new ToolShovel();
+        private ITool mSeed = new ToolSeed();
+        private ITool mSeedRadish = new ToolSeedRadish();
+        private ITool mWateringCan = new ToolWateringCan();
+        private ITool mHand = new ToolHand();
+        private ToolData mToolData = new ToolData();
+
         private void Update()
         {
             var playerCellPos = mGrid.WorldToCell(Global.Player.Position());
@@ -48,111 +56,61 @@ namespace ProjectIndieFarm
             {
                 if (cellPos.x < 10 && cellPos.x >= 0 && cellPos.y < 10 && cellPos.y >= 0)
                 {
+                    mToolData.ShowGrid = mShowGrid;
+                    mToolData.CellPos = cellPos;
+                    mToolData.Pen = mGridController.pen;
+                    mToolData.SoilTilemap = mTileMap;
+
                     //开垦
-                    if (Global.CurrentTool.Value == Constant.TOOL_SHOVEL && mShowGrid[cellPos.x, cellPos.y] == null)
+                    if (Global.CurrentTool.Value == Constant.TOOL_SHOVEL && mShovel.Selectable(mToolData))
                     {
                         ShowSelect(cellPos);
 
                         if (Input.GetMouseButton(0))
                         {
-                            mTileMap.SetTile(cellPos, mGridController.pen);
-                            mShowGrid[cellPos.x, cellPos.y] = new SoilData();
-                            AudioController.Get.SFXShoveDig.Play();
+                            mShovel.Use(mToolData);
                         }
                     }
 
                     //放种子
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
-                             mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
-                             Global.CurrentTool.Value == Constant.TOOL_SEED)
+                    else if (Global.CurrentTool.Value == Constant.TOOL_SEED && mSeed.Selectable(mToolData))
                     {
-                        if (Global.FruitSeedCount.Value > 0)
-                        {
-                            var gridCenterPos = ShowSelect(cellPos);
+                        mToolData.GridCenterPos = ShowSelect(cellPos);
 
-                            if (Input.GetMouseButton(0))
-                            {
-                                Global.FruitSeedCount.Value--;
-                                //放种子
-                                //这里的y值如果不减去0.5f会出现在格子之外
-                                var plantGameObject = ResController.Instance.plantPrefab.Instantiate()
-                                    .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
-                                var plant = plantGameObject.GetComponent<Plant>();
-                                plant.xCell = cellPos.x;
-                                plant.yCell = cellPos.y;
-                                PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
-                                mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
-                                AudioController.Get.SFXPutSeed.Play();
-                            }
+                        if (Input.GetMouseButton(0))
+                        {
+                            mSeed.Use(mToolData);
                         }
                     }
 
                     //种胡萝卜
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
-                             mShowGrid[cellPos.x, cellPos.y].HasPlant != true &&
-                             Global.CurrentTool.Value == Constant.TOOL_SEED_RADISH)
+                    else if (Global.CurrentTool.Value == Constant.TOOL_SEED_RADISH && mSeedRadish.Selectable(mToolData))
                     {
-                        if (Global.RadishSeedCount.Value > 0)
-                        {
-                            var gridCenterPos = ShowSelect(cellPos);
+                        mToolData.GridCenterPos = ShowSelect(cellPos);
 
-                            if (Input.GetMouseButton(0))
-                            {
-                                Global.RadishSeedCount.Value--;
-                                //放胡萝卜种子
-                                //这里的y值如果不减去0.5f会出现在格子之外
-                                var plantGameObject = ResController.Instance.plantRadishPrefab.Instantiate()
-                                    .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
-                                var plant = plantGameObject.GetComponent<PlantRadish>();
-                                plant.xCell = cellPos.x;
-                                plant.yCell = cellPos.y;
-                                PlantController.Instance.plants[cellPos.x, cellPos.y] = plant;
-                                mShowGrid[cellPos.x, cellPos.y].HasPlant = true;
-                                AudioController.Get.SFXPutSeed.Play();
-                            }
+                        if (Input.GetMouseButton(0))
+                        {
+                            mSeedRadish.Use(mToolData);
                         }
                     }
                     //浇水
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
-                             mShowGrid[cellPos.x, cellPos.y].Watered != true &&
-                             Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN)
+                    else if (Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN&& mWateringCan.Selectable(mToolData))
                     {
-                        var gridCenterPos = ShowSelect(cellPos);
+                        mToolData.GridCenterPos = ShowSelect(cellPos);
                         if (Input.GetMouseButton(0))
                         {
-                            //浇水
-                            ResController.Instance.waterPrefab.Instantiate()
-                                .Position(gridCenterPos.x, gridCenterPos.y - 0.5f);
-                            mShowGrid[cellPos.x, cellPos.y].Watered = true;
-                            AudioController.Get.SFXWater.Play();
+                            mWateringCan.Use(mToolData);
                         }
                     }
 
                     //收割
-                    else if (mShowGrid[cellPos.x, cellPos.y] != null &&
-                             mShowGrid[cellPos.x, cellPos.y].HasPlant &&
-                             mShowGrid[cellPos.x, cellPos.y].PlantState == PlantStates.Ripe &&
-                             Global.CurrentTool.Value == Constant.TOOL_HAND)
+                    else if (Global.CurrentTool.Value == Constant.TOOL_HAND&&mHand.Selectable(mToolData))
                     {
                         ShowSelect(cellPos);
 
                         if (Input.GetMouseButton(0))
                         {
-                            //触发收割果实事件，然后会在GameController中持续检测该事件是否完成，完成了则结束改事件
-                            Global.OnPlantHarvest.Trigger(PlantController.Instance.plants[cellPos.x, cellPos.y]);
-
-                            if (PlantController.Instance.plants[cellPos.x, cellPos.y] as Plant)
-                            {
-                                Global.FruitCount.Value++;
-                            }
-                            else if (PlantController.Instance.plants[cellPos.x, cellPos.y] as PlantRadish)
-                            {
-                                Global.RadishCount.Value++;
-                            }
-
-                            Destroy(PlantController.Instance.plants[cellPos.x, cellPos.y].GameObject);
-                            mShowGrid[cellPos.x, cellPos.y].HasPlant = false;
-                            AudioController.Get.SFXHarvest.Play();
+                           mHand.Use(mToolData);
                         }
                     }
                 }

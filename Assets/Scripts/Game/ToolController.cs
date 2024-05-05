@@ -29,12 +29,7 @@ namespace ProjectIndieFarm
             mSprite.enabled = false;
         }
 
-
-        private ITool mShovel = new ToolShovel();
-        private ITool mSeed = new ToolSeed();
-        private ITool mSeedRadish = new ToolSeedRadish();
-        private ITool mWateringCan = new ToolWateringCan();
-        private ITool mHand = new ToolHand();
+        
         private ToolData mToolData = new ToolData();
 
         private void Update()
@@ -60,57 +55,13 @@ namespace ProjectIndieFarm
                     mToolData.CellPos = cellPos;
                     mToolData.Pen = mGridController.pen;
                     mToolData.SoilTilemap = mTileMap;
-
-                    //开垦
-                    if (Global.CurrentTool.Value == Constant.TOOL_SHOVEL && mShovel.Selectable(mToolData))
+                    if (Global.CurrentTool.Value.Selectable(mToolData))
                     {
-                        ShowSelect(cellPos);
+                        mToolData.GridCenterPos=ShowSelect(cellPos);
 
                         if (Input.GetMouseButton(0))
                         {
-                            mShovel.Use(mToolData);
-                        }
-                    }
-
-                    //放种子
-                    else if (Global.CurrentTool.Value == Constant.TOOL_SEED && mSeed.Selectable(mToolData))
-                    {
-                        mToolData.GridCenterPos = ShowSelect(cellPos);
-
-                        if (Input.GetMouseButton(0))
-                        {
-                            mSeed.Use(mToolData);
-                        }
-                    }
-
-                    //种胡萝卜
-                    else if (Global.CurrentTool.Value == Constant.TOOL_SEED_RADISH && mSeedRadish.Selectable(mToolData))
-                    {
-                        mToolData.GridCenterPos = ShowSelect(cellPos);
-
-                        if (Input.GetMouseButton(0))
-                        {
-                            mSeedRadish.Use(mToolData);
-                        }
-                    }
-                    //浇水
-                    else if (Global.CurrentTool.Value == Constant.TOOL_WATERING_SCAN&& mWateringCan.Selectable(mToolData))
-                    {
-                        mToolData.GridCenterPos = ShowSelect(cellPos);
-                        if (Input.GetMouseButton(0))
-                        {
-                            mWateringCan.Use(mToolData);
-                        }
-                    }
-
-                    //收割
-                    else if (Global.CurrentTool.Value == Constant.TOOL_HAND&&mHand.Selectable(mToolData))
-                    {
-                        ShowSelect(cellPos);
-
-                        if (Input.GetMouseButton(0))
-                        {
-                           mHand.Use(mToolData);
+                            Global.CurrentTool.Value.Use(mToolData);
                         }
                     }
                 }

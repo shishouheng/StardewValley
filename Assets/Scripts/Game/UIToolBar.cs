@@ -12,38 +12,38 @@ namespace ProjectIndieFarm
 			HideAllSelect();
 			Btn1select.Show();
 			Global.Tool.Icon.sprite = Btn1Icon.sprite;
-			Btn1.onClick.AddListener((() => ChangeTool(Constant.TOOL_HAND,Btn1select,Btn1Icon.sprite)));
-			Btn2.onClick.AddListener((() => ChangeTool(Constant.TOOL_SHOVEL,Btn2select,Btn2Icon.sprite)));
-			Btn3.onClick.AddListener((() => ChangeTool(Constant.TOOL_SEED,Btn3select,Btn3Icon.sprite)));
-			Btn4.onClick.AddListener((() => ChangeTool(Constant.TOOL_WATERING_SCAN,Btn4select,Btn4Icon.sprite)));
-			Btn5.onClick.AddListener((() => ChangeTool(Constant.TOOL_SEED_RADISH,Btn5select,Btn5Icon.sprite)));
+			Btn1.onClick.AddListener((() => ChangeTool(Constant.ToolHand,Btn1select,Btn1Icon.sprite)));
+			Btn2.onClick.AddListener((() => ChangeTool(Constant.ToolShovel,Btn2select,Btn2Icon.sprite)));
+			Btn3.onClick.AddListener((() => ChangeTool(Constant.ToolSeed,Btn3select,Btn3Icon.sprite)));
+			Btn4.onClick.AddListener((() => ChangeTool(Constant.ToolWateringCan,Btn4select,Btn4Icon.sprite)));
+			Btn5.onClick.AddListener((() => ChangeTool(Constant.ToolSeedRadish,Btn5select,Btn5Icon.sprite)));
 		}
 
 		private void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				ChangeTool(Constant.TOOL_HAND,Btn1select,Btn1Icon.sprite);
+				ChangeTool(Constant.ToolHand,Btn1select,Btn1Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha2))
 			{
-				ChangeTool(Constant.TOOL_SHOVEL,Btn2select,Btn2Icon.sprite);
+				ChangeTool(Constant.ToolShovel,Btn2select,Btn2Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha3))
 			{
-				ChangeTool(Constant.TOOL_SEED,Btn3select,Btn3Icon.sprite);
+				ChangeTool(Constant.ToolSeed,Btn3select,Btn3Icon.sprite);
 			}
 
 			if (Input.GetKeyDown(KeyCode.Alpha4))
 			{
-				ChangeTool(Constant.TOOL_WATERING_SCAN,Btn4select,Btn4Icon.sprite);
+				ChangeTool(Constant.ToolWateringCan,Btn4select,Btn4Icon.sprite);
 			}
 			
 			if (Input.GetKeyDown(KeyCode.Alpha5))
 			{
-				ChangeTool(Constant.TOOL_SEED_RADISH,Btn5select,Btn5Icon.sprite);
+				ChangeTool(Constant.ToolSeedRadish,Btn5select,Btn5Icon.sprite);
 			}
 		}
 
@@ -55,7 +55,7 @@ namespace ProjectIndieFarm
 			Btn4select.Hide();
 			Btn5select.Hide();
 		}
-		void ChangeTool(string tool,Image selectImage,Sprite icon)
+		void ChangeTool(ITool tool,Image selectImage,Sprite icon)
 		{
 			Global.CurrentTool.Value = tool;
 			AudioController.Get.SFXTake.Play();
